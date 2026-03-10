@@ -19,6 +19,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: `${label}の記事一覧`,
     description: `動画配信サービスの${label}に関する記事をまとめています。`,
+    alternates: { canonical: `https://vod-navi-site.vercel.app/category/${slug}/` },
   };
 }
 

@@ -7,6 +7,7 @@ import Sidebar from '@/components/Sidebar';
 export const metadata: Metadata = {
   title: 'キャンペーン情報一覧',
   description: '動画配信サービスの最新キャンペーン・割引・無料体験情報をまとめています。',
+  alternates: { canonical: 'https://vod-navi-site.vercel.app/campaigns/' },
 };
 
 export default function CampaignsPage() {

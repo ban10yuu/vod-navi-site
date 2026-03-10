@@ -21,6 +21,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: `${service.title}の評判・レビュー・キャンペーン`,
     description: service.description,
+    alternates: { canonical: `https://vod-navi-site.vercel.app/service/${slug}/` },
   };
 }
 
@@ -33,8 +34,34 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
   const campaigns = getCampaignsByService(slug);
   const categories = Object.entries(CATEGORY_LABELS) as [ServiceCategory, string][];
 
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'Product',
+        name: service.title,
+        description: service.description,
+        category: '動画配信サービス',
+        offers: {
+          '@type': 'Offer',
+          price: service.monthlyPrice,
+          priceCurrency: 'JPY',
+          availability: 'https://schema.org/InStock',
+        },
+      },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'ホーム', item: 'https://vod-navi-site.vercel.app/' },
+          { '@type': 'ListItem', position: 2, name: service.title },
+        ],
+      },
+    ],
+  };
+
   return (
     <div className="max-w-6xl mx-auto px-4 py-8">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       {/* Breadcrumb */}
       <nav className="text-xs text-gray-600 mb-6 flex items-center gap-1">
         <Link href="/" className="hover:text-[#7c3aed] transition-colors">ホーム</Link>

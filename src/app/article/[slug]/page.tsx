@@ -24,6 +24,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: article.title,
     description: article.excerpt,
     openGraph: { title: article.title, description: article.excerpt, type: 'article' },
+    alternates: { canonical: `https://vod-navi-site.vercel.app/article/${slug}/` },
   };
 }
 
@@ -37,8 +38,32 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
   const catLabel = CATEGORY_LABELS[article.category];
   const catColor = CATEGORY_COLORS[article.category];
 
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'Article',
+        headline: article.title,
+        description: article.excerpt,
+        datePublished: article.publishedAt,
+        author: { '@type': 'Organization', name: '動画配信ナビ' },
+        publisher: { '@type': 'Organization', name: '動画配信ナビ', url: 'https://vod-navi-site.vercel.app' },
+        mainEntityOfPage: `https://vod-navi-site.vercel.app/article/${slug}/`,
+      },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'ホーム', item: 'https://vod-navi-site.vercel.app/' },
+          ...(service ? [{ '@type': 'ListItem', position: 2, name: service.title, item: `https://vod-navi-site.vercel.app/service/${service.slug}/` }] : []),
+          { '@type': 'ListItem', position: service ? 3 : 2, name: article.title },
+        ],
+      },
+    ],
+  };
+
   return (
     <div className="max-w-3xl mx-auto px-4 py-8">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       {/* Breadcrumb */}
       <nav className="text-xs text-gray-600 mb-4 flex items-center gap-1 flex-wrap">
         <Link href="/" className="hover:text-[#7c3aed] transition-colors">ホーム</Link>
