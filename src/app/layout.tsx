@@ -32,6 +32,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="ja">
       <head>
         <meta name="google-adsense-account" content="ca-pub-1611624572831066" />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-V11MKY0X3F" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-V11MKY0X3F');`,
+          }}
+        />
       </head>
       <body className={notoSansJP.className}>
         <div className="relative z-10 flex flex-col min-h-screen">
