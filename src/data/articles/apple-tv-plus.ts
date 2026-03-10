@@ -8,7 +8,7 @@ export const articles: Article[] = [
     category: 'review',
     excerpt: 'Apple TV+を2年以上使い続けてわかった本音をレビュー。オリジナル作品の質、ラインナップの少なさ、月額900円の価値について、メリット・デメリットを正直にお伝えします。',
     tags: ['Apple TV+', 'レビュー', '評判', 'オリジナル作品', '口コミ', 'メリット', 'デメリット'],
-    publishedAt: '2026-05-15',
+    publishedAt: '2026-03-04',
     relatedSlugs: ['apple-tv-plus-vs-disney-plus', 'apple-tv-plus-cost', 'apple-tv-plus-recommend'],
     sections: [
       {
@@ -102,7 +102,7 @@ export const articles: Article[] = [
     category: 'comparison',
     excerpt: 'Apple TV+とDisney+を「オリジナル作品の質」に焦点を当てて徹底比較。料金・作品数・ジャンル・受賞歴など6つの観点から、どちらがあなたに合うか結論を出します。',
     tags: ['Apple TV+', 'Disney+', '比較', 'オリジナル作品', '料金', 'VOD比較', '動画配信'],
-    publishedAt: '2026-05-16',
+    publishedAt: '2026-03-04',
     relatedSlugs: ['apple-tv-plus-review', 'apple-tv-plus-cost', 'apple-tv-plus-recommend'],
     sections: [
       {
@@ -200,7 +200,7 @@ Disney+ → 巨大IP（マーベル・スター・ウォーズ）の独占配信
     category: 'recommend',
     excerpt: 'Apple TV+で今すぐ観るべきおすすめ作品15選を厳選。エミー賞受賞作から知る人ぞ知る隠れた名作まで、ジャンル別に紹介します。「何から観ればいい？」という人は必読です。',
     tags: ['Apple TV+', 'おすすめ', '名作', 'ドラマ', 'セヴェランス', 'テッド・ラッソ', '映画'],
-    publishedAt: '2026-05-17',
+    publishedAt: '2026-03-04',
     relatedSlugs: ['apple-tv-plus-review', 'apple-tv-plus-vs-disney-plus', 'apple-tv-plus-howto'],
     sections: [
       {
@@ -282,7 +282,7 @@ Disney+ → 巨大IP（マーベル・スター・ウォーズ）の独占配信
     category: 'howto',
     excerpt: 'Apple TV+の登録方法をスクショ付きでわかりやすく解説。7日間無料体験、Apple製デバイス購入での3ヶ月無料、Apple Oneなど、無料・お得に始める3つの方法も紹介します。',
     tags: ['Apple TV+', '登録方法', '無料体験', 'Apple One', '始め方', '使い方', '解約'],
-    publishedAt: '2026-05-18',
+    publishedAt: '2026-03-04',
     relatedSlugs: ['apple-tv-plus-review', 'apple-tv-plus-cost', 'apple-tv-plus-recommend'],
     sections: [
       {
@@ -394,7 +394,7 @@ Disney+ → 巨大IP（マーベル・スター・ウォーズ）の独占配信
     category: 'cost',
     excerpt: 'Apple TV+の月額900円は本当にお得なのか？作品数の少なさを考慮した「実質コスパ」を検証。Apple Oneとの比較や、コスパを最大化するテクニックも紹介します。',
     tags: ['Apple TV+', '料金', 'コスパ', 'Apple One', '月額', '値段', '比較'],
-    publishedAt: '2026-05-19',
+    publishedAt: '2026-03-04',
     relatedSlugs: ['apple-tv-plus-review', 'apple-tv-plus-howto', 'apple-tv-plus-vs-disney-plus'],
     sections: [
       {

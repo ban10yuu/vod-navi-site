@@ -8,7 +8,7 @@ export const articles: Article[] = [
     category: 'review',
     excerpt: '世界最大のアニメ専門配信サービスCrunchyrollを日本在住ユーザーの視点から徹底レビュー。メリット・デメリット、口コミ評判、国内サービスとの違いまで正直にまとめました。',
     tags: ['Crunchyroll', 'レビュー', '評判', 'アニメ配信', '口コミ', '海外アニメ', '2026年'],
-    publishedAt: '2026-05-05',
+    publishedAt: '2026-03-02',
     relatedSlugs: ['crunchyroll-vs-d-anime', 'crunchyroll-cost', 'crunchyroll-howto'],
     sections: [
       {
@@ -99,7 +99,7 @@ export const articles: Article[] = [
     category: 'comparison',
     excerpt: 'アニメ特化サービスの2大巨頭、Crunchyrollとdアニメストアを徹底比較。料金・作品数・字幕・機能など7項目で勝負。アニメファンが選ぶべきはどっち？',
     tags: ['Crunchyroll', 'dアニメストア', '比較', 'アニメ配信', '料金比較', 'VOD比較', '英語学習'],
-    publishedAt: '2026-05-06',
+    publishedAt: '2026-03-02',
     relatedSlugs: ['crunchyroll-review-2026', 'crunchyroll-cost', 'crunchyroll-anime-recommend'],
     sections: [
       {
@@ -188,7 +188,7 @@ OPスキップ：dアニメストアのみ対応
     category: 'recommend',
     excerpt: 'Crunchyrollで配信中のアニメからおすすめ20作品を厳選。独占配信作品やCrunchyrollオリジナルを中心に、ジャンル別に紹介します。',
     tags: ['Crunchyroll', 'おすすめアニメ', 'アニメランキング', '独占配信', 'オリジナルアニメ', '2026年', 'アニメ'],
-    publishedAt: '2026-05-07',
+    publishedAt: '2026-03-02',
     relatedSlugs: ['crunchyroll-review-2026', 'crunchyroll-vs-d-anime', 'crunchyroll-howto'],
     sections: [
       {
@@ -278,7 +278,7 @@ OPスキップ：dアニメストアのみ対応
     category: 'howto',
     excerpt: 'Crunchyrollの登録手順を画像付きで分かりやすく解説。3つの有料プランの違い、14日間無料体験の始め方、解約方法まで丸ごとカバーします。',
     tags: ['Crunchyroll', '登録方法', '無料体験', 'プラン比較', '解約方法', '使い方', '初心者向け'],
-    publishedAt: '2026-05-08',
+    publishedAt: '2026-03-02',
     relatedSlugs: ['crunchyroll-review-2026', 'crunchyroll-cost', 'crunchyroll-anime-recommend'],
     sections: [
       {
@@ -372,7 +372,7 @@ OPスキップ：dアニメストアのみ対応
     category: 'cost',
     excerpt: 'Crunchyrollの料金プランを徹底分析。月額790円のFanプランは本当にお得？他のアニメ配信サービスとのコスパ比較から、料金を抑える節約テクニックまで解説します。',
     tags: ['Crunchyroll', '料金', 'プラン比較', 'コスパ', '節約', 'アニメ配信', '月額'],
-    publishedAt: '2026-05-09',
+    publishedAt: '2026-03-02',
     relatedSlugs: ['crunchyroll-review-2026', 'crunchyroll-vs-d-anime', 'crunchyroll-howto'],
     sections: [
       {

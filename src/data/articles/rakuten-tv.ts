@@ -11,7 +11,7 @@ export const articles: Article[] = [
     category: 'review',
     excerpt: '楽天が運営する動画配信サービスRakuten TV。楽天ポイントが使える・貯まるって聞くけど、実際のところどうなの？楽天経済圏ユーザーが本音でレビューするよ。',
     tags: ['Rakuten TV', 'レビュー', '評判', '楽天ポイント', '楽天経済圏', '都度課金', '動画配信'],
-    publishedAt: '2026-05-20',
+    publishedAt: '2026-03-05',
     relatedSlugs: ['rakuten-tv-vs-amazon', 'rakuten-tv-cost', 'rakuten-tv-free-recommend'],
     sections: [
       {
@@ -101,7 +101,7 @@ export const articles: Article[] = [
     category: 'comparison',
     excerpt: '楽天ポイントで映画を見られるRakuten TVと、コスパ最強のAmazon Prime Video。楽天経済圏のユーザーはどちらを選ぶべき？料金・作品・使い勝手を徹底比較するよ。',
     tags: ['Rakuten TV', 'Amazon Prime Video', '比較', '楽天ポイント', 'Amazonプライム', 'VOD', 'コスパ'],
-    publishedAt: '2026-05-21',
+    publishedAt: '2026-03-05',
     relatedSlugs: ['rakuten-tv-review', 'rakuten-tv-cost', 'rakuten-tv-free-recommend'],
     sections: [
       {
@@ -191,7 +191,7 @@ export const articles: Article[] = [
     category: 'recommend',
     excerpt: 'Rakuten TVで完全無料で見られるおすすめ作品を20本厳選！お金をかけずに楽しめる映画・ドラマ・アニメを、ジャンル別に紹介するよ。',
     tags: ['Rakuten TV', '無料作品', 'おすすめ', '映画', 'ドラマ', 'アニメ', '0円'],
-    publishedAt: '2026-05-22',
+    publishedAt: '2026-03-05',
     relatedSlugs: ['rakuten-tv-review', 'rakuten-tv-howto', 'rakuten-tv-cost'],
     sections: [
       {
@@ -291,7 +291,7 @@ export const articles: Article[] = [
     category: 'howto',
     excerpt: 'Rakuten TVの登録方法から楽天ポイントでの支払い方法、テレビでの視聴方法まで、初心者向けにわかりやすく解説するよ。楽天ポイントの賢い使い方も紹介！',
     tags: ['Rakuten TV', '使い方', '楽天ポイント', '登録方法', '支払い方法', 'テレビ視聴', '初心者'],
-    publishedAt: '2026-05-23',
+    publishedAt: '2026-03-05',
     relatedSlugs: ['rakuten-tv-review', 'rakuten-tv-cost', 'rakuten-tv-free-recommend'],
     sections: [
       {
@@ -391,7 +391,7 @@ export const articles: Article[] = [
     category: 'cost',
     excerpt: 'Rakuten TVは月額0円の都度課金制。レンタル料金の相場から楽天ポイントを駆使したお得な使い方、他サービスとのコスト比較まで、料金面を完全ガイドするよ。',
     tags: ['Rakuten TV', '料金', '都度課金', '楽天ポイント', 'コスパ', 'レンタル料金', 'VOD'],
-    publishedAt: '2026-05-24',
+    publishedAt: '2026-03-05',
     relatedSlugs: ['rakuten-tv-review', 'rakuten-tv-vs-amazon', 'rakuten-tv-howto'],
     sections: [
       {

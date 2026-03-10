@@ -7,7 +7,7 @@ export const articles: Article[] = [
     category: 'review',
     excerpt: 'バンダイチャンネルを実際に使ってみたガンダムファン目線のレビュー。月額1,100円の価値はあるのか、ラインナップ・画質・使い勝手を徹底検証します。',
     tags: ['バンダイチャンネル', 'レビュー', '評判', 'ガンダム', 'ロボットアニメ', '特撮', 'バンダイナムコ'],
-    publishedAt: '2026-06-04',
+    publishedAt: '2026-03-08',
     relatedSlugs: ['bandai-channel-cost', 'bandai-channel-vs-d-anime', 'bandai-channel-gundam-guide'],
     sections: [
       {
@@ -86,7 +86,7 @@ export const articles: Article[] = [
     category: 'comparison',
     excerpt: 'ロボットアニメ好きがVODを選ぶとき、バンダイチャンネルとdアニメストアのどちらが最適か？料金・ガンダムの充実度・独占作品・使い勝手をあらゆる角度から比較します。',
     tags: ['バンダイチャンネル', 'dアニメストア', '比較', 'ロボットアニメ', 'ガンダム', '料金比較', 'VOD'],
-    publishedAt: '2026-06-05',
+    publishedAt: '2026-03-08',
     relatedSlugs: ['bandai-channel-review', 'bandai-channel-cost', 'bandai-channel-gundam-guide'],
     sections: [
       {
@@ -167,7 +167,7 @@ export const articles: Article[] = [
     category: 'recommend',
     excerpt: 'バンダイチャンネルで配信中のガンダム全シリーズを完全ガイド。宇宙世紀の時系列順、初心者向けのおすすめ視聴順、シリーズごとの見どころまで網羅的に解説します。',
     tags: ['バンダイチャンネル', 'ガンダム', '視聴ガイド', '宇宙世紀', 'おすすめ', '全シリーズ', '視聴順'],
-    publishedAt: '2026-06-06',
+    publishedAt: '2026-03-08',
     relatedSlugs: ['bandai-channel-review', 'bandai-channel-vs-d-anime', 'bandai-channel-cost'],
     sections: [
       {
@@ -254,7 +254,7 @@ export const articles: Article[] = [
     category: 'howto',
     excerpt: 'バンダイチャンネルの新規登録手順、有料プランへの加入方法、基本的な使い方、解約方法まで初心者向けに丁寧に解説。無料会員と有料会員の違いも分かります。',
     tags: ['バンダイチャンネル', '登録方法', '使い方', '解約方法', '月額プラン', '無料会員', '初心者向け'],
-    publishedAt: '2026-06-07',
+    publishedAt: '2026-03-08',
     relatedSlugs: ['bandai-channel-review', 'bandai-channel-cost', 'bandai-channel-gundam-guide'],
     sections: [
       {
@@ -347,7 +347,7 @@ export const articles: Article[] = [
     category: 'cost',
     excerpt: 'バンダイチャンネルの月額1,100円は高いのか安いのか？他のVODサービスとの料金比較、1作品あたりのコスト計算、お得に使うコツまでコスパを徹底的に検証します。',
     tags: ['バンダイチャンネル', '月額料金', 'コスパ', '料金比較', '1100円', 'VOD料金', 'サブスク'],
-    publishedAt: '2026-06-08',
+    publishedAt: '2026-03-08',
     relatedSlugs: ['bandai-channel-review', 'bandai-channel-vs-d-anime', 'bandai-channel-howto'],
     sections: [
       {

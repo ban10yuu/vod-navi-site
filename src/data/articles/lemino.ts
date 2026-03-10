@@ -8,7 +8,7 @@ export const articles: Article[] = [
     category: 'review',
     excerpt: '旧dTVから大幅リニューアルしたLeminoを徹底レビュー。韓流ドラマの充実度、無料コンテンツの実力、実際のユーザー口コミまでまとめて紹介します。',
     tags: ['Lemino', 'レビュー', '評判', '口コミ', '旧dTV', '韓流', 'NTTドコモ'],
-    publishedAt: '2026-04-25',
+    publishedAt: '2026-02-28',
     relatedSlugs: ['lemino-vs-u-next', 'lemino-korean-drama', 'lemino-howto', 'lemino-cost-analysis'],
     sections: [
       {
@@ -102,7 +102,7 @@ K-POPアーティストのライブ映像やコンサート配信が充実して
     category: 'comparison',
     excerpt: 'LeminoとU-NEXTを韓流ドラマの観点から徹底比較。作品数・独占配信・料金・画質など6つの観点で、どちらが韓流ファンに最適か結論を出します。',
     tags: ['Lemino', 'U-NEXT', '比較', '韓流ドラマ', '韓国ドラマ', '料金比較', 'VOD比較'],
-    publishedAt: '2026-04-26',
+    publishedAt: '2026-02-28',
     relatedSlugs: ['lemino-review-2026', 'lemino-korean-drama', 'lemino-cost-analysis'],
     sections: [
       {
@@ -196,7 +196,7 @@ U-NEXT：月額2,189円 − 1,200ポイント ＝ 実質989円<br>
     category: 'recommend',
     excerpt: 'Leminoで配信中の韓国ドラマからおすすめ20作品を厳選。ラブロマンスからサスペンスまでジャンル別に紹介。初心者にもぴったりの韓流入門ガイドです。',
     tags: ['Lemino', '韓国ドラマ', 'おすすめ', '韓流', 'ラブロマンス', 'サスペンス', '2026年'],
-    publishedAt: '2026-04-27',
+    publishedAt: '2026-02-28',
     relatedSlugs: ['lemino-review-2026', 'lemino-vs-u-next', 'lemino-howto'],
     sections: [
       {
@@ -284,7 +284,7 @@ U-NEXT：月額2,189円 − 1,200ポイント ＝ 実質989円<br>
     category: 'howto',
     excerpt: 'Leminoの登録方法を画像付きで分かりやすく解説。dアカウントの作り方から31日間無料体験の始め方、解約方法まで、初めてでも迷わないステップガイドです。',
     tags: ['Lemino', '登録方法', '無料体験', '始め方', 'dアカウント', '解約方法', '使い方'],
-    publishedAt: '2026-04-28',
+    publishedAt: '2026-02-28',
     relatedSlugs: ['lemino-review-2026', 'lemino-cost-analysis', 'lemino-korean-drama'],
     sections: [
       {
@@ -374,7 +374,7 @@ U-NEXT：月額2,189円 − 1,200ポイント ＝ 実質989円<br>
     category: 'cost',
     excerpt: 'Leminoの有料プレミアム（月額990円）と無料プランを徹底比較。どちらが自分に合っているか、視聴スタイル別にベストな選択を提案します。',
     tags: ['Lemino', '料金', '無料プラン', 'プレミアム', 'コスパ', '月額990円', '比較'],
-    publishedAt: '2026-04-29',
+    publishedAt: '2026-02-28',
     relatedSlugs: ['lemino-review-2026', 'lemino-vs-u-next', 'lemino-howto'],
     sections: [
       {

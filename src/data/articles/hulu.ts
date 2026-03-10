@@ -11,7 +11,7 @@ export const articles: Article[] = [
     category: 'review',
     excerpt: '日テレ系ドラマの見逃し配信からオリジナル作品まで充実のHulu。月額1,026円で楽しめるコンテンツの質と量、リアルなユーザーの声を徹底レビューするよ。',
     tags: ['Hulu', 'レビュー', '評判', '口コミ', '2026年', '日テレ', '動画配信'],
-    publishedAt: '2026-04-05',
+    publishedAt: '2026-02-24',
     relatedSlugs: ['hulu-cost-worth', 'hulu-vs-fod', 'hulu-howto-guide'],
     sections: [
       {
@@ -101,7 +101,7 @@ export const articles: Article[] = [
     category: 'comparison',
     excerpt: '国内ドラマに強いHuluとFOD Premiumを徹底比較。日テレ系 vs フジテレビ系、料金、作品数、使い勝手まで、国内ドラマファンのためのサービス選びガイドだよ。',
     tags: ['Hulu', 'FOD Premium', '比較', '国内ドラマ', '日テレ', 'フジテレビ', 'VOD'],
-    publishedAt: '2026-04-06',
+    publishedAt: '2026-02-24',
     relatedSlugs: ['hulu-review-2026', 'hulu-drama-recommend', 'hulu-cost-worth'],
     sections: [
       {
@@ -191,7 +191,7 @@ export const articles: Article[] = [
     category: 'recommend',
     excerpt: 'Huluで見られるおすすめ国内ドラマを厳選して25作品紹介。日テレ系の名作から話題のオリジナルドラマまで、ドラマ好きが本気で選んだラインナップだよ。',
     tags: ['Hulu', 'おすすめ', '国内ドラマ', '日テレ', 'ドラマ', '見放題', 'ランキング'],
-    publishedAt: '2026-04-07',
+    publishedAt: '2026-02-24',
     relatedSlugs: ['hulu-review-2026', 'hulu-vs-fod', 'hulu-howto-guide'],
     sections: [
       {
@@ -302,7 +302,7 @@ export const articles: Article[] = [
     category: 'howto',
     excerpt: 'Huluの登録手順から基本的な使い方、便利機能、解約方法まで丁寧に解説。初めてHuluを使う人でも迷わないように、画面の流れに沿ってステップバイステップで説明するよ。',
     tags: ['Hulu', '登録方法', '使い方', '解約', '初心者', 'ガイド', 'VOD'],
-    publishedAt: '2026-04-08',
+    publishedAt: '2026-02-24',
     relatedSlugs: ['hulu-review-2026', 'hulu-cost-worth', 'hulu-drama-recommend'],
     sections: [
       {
@@ -409,7 +409,7 @@ export const articles: Article[] = [
     category: 'cost',
     excerpt: 'Hulu月額1,026円は高い？安い？他サービスとの料金比較、1日あたりのコスト、コンテンツ量から見たコスパを徹底的に検証するよ。',
     tags: ['Hulu', '料金', 'コスパ', '月額', '価格比較', 'VOD', '動画配信'],
-    publishedAt: '2026-04-09',
+    publishedAt: '2026-02-24',
     relatedSlugs: ['hulu-review-2026', 'hulu-vs-fod', 'hulu-howto-guide'],
     sections: [
       {

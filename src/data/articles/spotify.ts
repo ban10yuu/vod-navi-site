@@ -8,7 +8,7 @@ export const articles: Article[] = [
     category: 'review',
     excerpt: '音楽ストリーミング最大手Spotifyが本格参入した動画コンテンツを徹底レビュー。ビデオポッドキャストの使い心地、ラインナップ、音楽サービスとの連携まで正直に評価します。',
     tags: ['Spotify', 'ビデオポッドキャスト', '動画機能', 'レビュー', '評判', 'Premium', '2026年'],
-    publishedAt: '2026-06-09',
+    publishedAt: '2026-03-09',
     relatedSlugs: ['spotify-vs-youtube-premium', 'spotify-podcast-recommend', 'spotify-cost-plans'],
     sections: [
       {
@@ -99,7 +99,7 @@ export const articles: Article[] = [
     category: 'comparison',
     excerpt: 'Spotifyとyoutube Premiumを音楽・動画・料金・機能の4軸で徹底比較。音楽も動画も両方楽しみたい人にとってベストな選択肢はどちらかを検証します。',
     tags: ['Spotify', 'YouTube Premium', '比較', '音楽配信', '動画配信', '料金', 'ポッドキャスト'],
-    publishedAt: '2026-06-10',
+    publishedAt: '2026-03-09',
     relatedSlugs: ['spotify-review-video', 'spotify-cost-plans', 'spotify-podcast-recommend'],
     sections: [
       {
@@ -192,7 +192,7 @@ Spotifyの「Discover Weekly」や「Release Radar」は長年のデータ蓄積
     category: 'recommend',
     excerpt: 'Spotifyで今すぐ観られるおすすめビデオポッドキャストを20番組厳選。エンタメ・アニメ・教養・トーク・音楽の5ジャンルから、ハマる番組だけを集めました。',
     tags: ['Spotify', 'ビデオポッドキャスト', 'おすすめ', 'ポッドキャスト', 'エンタメ', 'アニメ', '2026年'],
-    publishedAt: '2026-06-11',
+    publishedAt: '2026-03-09',
     relatedSlugs: ['spotify-review-video', 'spotify-vs-youtube-premium', 'spotify-howto-premium'],
     sections: [
       {
@@ -278,7 +278,7 @@ Spotifyの「Discover Weekly」や「Release Radar」は長年のデータ蓄積
     category: 'howto',
     excerpt: 'Spotify Premiumの登録手順を画像付きでわかりやすく解説。30日間の無料体験を確実に受ける方法、支払い方法の選び方、お得に始めるコツまで網羅します。',
     tags: ['Spotify', 'Premium', '登録方法', '無料体験', '始め方', '支払い方法', '使い方'],
-    publishedAt: '2026-06-12',
+    publishedAt: '2026-03-09',
     relatedSlugs: ['spotify-cost-plans', 'spotify-review-video', 'spotify-podcast-recommend'],
     sections: [
       {
@@ -371,7 +371,7 @@ Spotifyの「Discover Weekly」や「Release Radar」は長年のデータ蓄積
     category: 'cost',
     excerpt: 'Spotifyの全プランを料金・機能・使い勝手で徹底比較。無料プラン・Premium・Duo・Family・学割、それぞれのプランが向いている人とコスパを検証します。',
     tags: ['Spotify', '料金', 'プラン比較', 'Premium', 'Family', 'コスパ', '学割'],
-    publishedAt: '2026-06-13',
+    publishedAt: '2026-03-09',
     relatedSlugs: ['spotify-howto-premium', 'spotify-review-video', 'spotify-vs-youtube-premium'],
     sections: [
       {

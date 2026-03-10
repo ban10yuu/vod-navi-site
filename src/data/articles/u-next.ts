@@ -8,7 +8,7 @@ export const articles: Article[] = [
     category: 'review',
     excerpt: '見放題作品数No.1のU-NEXTを実際に使い込んで本音レビュー。良い評判・悪い評判を両方集めて、リアルな使用感をお伝えするよ。',
     tags: ['U-NEXT', 'レビュー', '評判', '口コミ', '2026年', '動画配信', 'VOD'],
-    publishedAt: '2026-03-11',
+    publishedAt: '2026-02-19',
     relatedSlugs: ['u-next-cost-analysis', 'u-next-vs-netflix', 'u-next-howto-register'],
     sections: [
       {
@@ -92,7 +92,7 @@ export const articles: Article[] = [
     category: 'comparison',
     excerpt: '国内2大VODサービスのU-NEXTとNetflixを徹底比較。料金・作品数・オリジナル・使い勝手など、あらゆる角度から違いを解説するよ。',
     tags: ['U-NEXT', 'Netflix', '比較', 'VOD', '動画配信', 'サブスク'],
-    publishedAt: '2026-03-12',
+    publishedAt: '2026-02-19',
     relatedSlugs: ['u-next-review-2026', 'u-next-cost-analysis'],
     sections: [
       {
@@ -180,7 +180,7 @@ export const articles: Article[] = [
     category: 'recommend',
     excerpt: 'アニメ作品数5,700本以上のU-NEXTから、ジャンル別に本当に面白いおすすめアニメ30作品を厳選。見放題で今すぐ楽しめる作品だけを集めたよ。',
     tags: ['U-NEXT', 'アニメ', 'おすすめ', 'ランキング', '見放題', '2026年', 'アニメ好き'],
-    publishedAt: '2026-03-13',
+    publishedAt: '2026-02-19',
     relatedSlugs: ['u-next-review-2026', 'u-next-vs-netflix'],
     sections: [
       {
@@ -268,7 +268,7 @@ export const articles: Article[] = [
     category: 'howto',
     excerpt: 'U-NEXTの31日間無料トライアルの登録方法をスクショ付きで徹底解説。注意点や解約方法もあわせて紹介するから、安心して始められるよ。',
     tags: ['U-NEXT', '登録方法', '無料トライアル', '解約方法', '始め方', 'VOD入門'],
-    publishedAt: '2026-03-14',
+    publishedAt: '2026-02-19',
     relatedSlugs: ['u-next-review-2026', 'u-next-cost-analysis'],
     sections: [
       {
@@ -358,7 +358,7 @@ export const articles: Article[] = [
     category: 'cost',
     excerpt: '「U-NEXTは高い」という声に対して、実質コストを計算しながら本当にお得なのかを徹底分析。他サービスとの比較や節約術も紹介するよ。',
     tags: ['U-NEXT', '料金', 'コスパ', '月額', 'ポイント', '節約', '比較'],
-    publishedAt: '2026-03-15',
+    publishedAt: '2026-02-19',
     relatedSlugs: ['u-next-review-2026', 'u-next-vs-netflix', 'u-next-howto-register'],
     sections: [
       {

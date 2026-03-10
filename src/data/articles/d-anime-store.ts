@@ -7,7 +7,7 @@ export const articles: Article[] = [
     category: 'review',
     excerpt: 'dアニメストアを実際に使ってみた正直な感想と、ネット上の口コミ・評判をまとめました。月額550円でアニメ見放題は本当にお得なのか、メリット・デメリットを徹底検証します。',
     tags: ['dアニメストア', 'レビュー', '口コミ', '評判', 'アニメ見放題', '月額550円', 'ドコモ'],
-    publishedAt: '2026-03-31',
+    publishedAt: '2026-02-23',
     relatedSlugs: ['d-anime-store-cost', 'd-anime-store-vs-crunchyroll', 'd-anime-store-recommend'],
     sections: [
       {
@@ -85,7 +85,7 @@ export const articles: Article[] = [
     category: 'comparison',
     excerpt: 'アニメ特化の2大サービス「dアニメストア」と「Crunchyroll」を徹底比較。料金・作品数・画質・対応地域・独自機能まで、あらゆる角度から両サービスの違いを検証します。',
     tags: ['dアニメストア', 'Crunchyroll', '比較', 'アニメ配信', '料金比較', '作品数', 'サブスク'],
-    publishedAt: '2026-04-01',
+    publishedAt: '2026-02-23',
     relatedSlugs: ['d-anime-store-review', 'd-anime-store-cost', 'd-anime-store-recommend'],
     sections: [
       {
@@ -164,7 +164,7 @@ export const articles: Article[] = [
     category: 'recommend',
     excerpt: 'dアニメストアで観られるおすすめアニメをジャンル別に30作品厳選！バトル・ラブコメ・日常系・ファンタジー・SFなど、次に何を観るか迷ったときの参考にしてください。',
     tags: ['dアニメストア', 'おすすめアニメ', 'ランキング', 'ジャンル別', 'アニメ見放題', '名作', '新作'],
-    publishedAt: '2026-04-02',
+    publishedAt: '2026-02-23',
     relatedSlugs: ['d-anime-store-review', 'd-anime-store-vs-crunchyroll', 'd-anime-store-cost'],
     sections: [
       {
@@ -254,7 +254,7 @@ export const articles: Article[] = [
     category: 'howto',
     excerpt: 'dアニメストアの登録方法・解約方法を初心者にも分かりやすく解説。dアカウントの作成から31日間無料体験の始め方、解約時の注意点まで、迷わず手続きできるようガイドします。',
     tags: ['dアニメストア', '登録方法', '解約方法', '無料体験', 'dアカウント', '手続き', '初心者向け'],
-    publishedAt: '2026-04-03',
+    publishedAt: '2026-02-23',
     relatedSlugs: ['d-anime-store-review', 'd-anime-store-cost', 'd-anime-store-recommend'],
     sections: [
       {
@@ -334,7 +334,7 @@ export const articles: Article[] = [
     category: 'cost',
     excerpt: 'dアニメストアの月額550円は本当にお得なのか？他のVODサービスとの料金比較、1作品あたりのコスト計算、レンタル作品の料金体系まで、コスパを徹底的に検証します。',
     tags: ['dアニメストア', '月額料金', 'コスパ', '料金比較', '作品数', 'VOD料金', 'サブスク'],
-    publishedAt: '2026-04-04',
+    publishedAt: '2026-02-23',
     relatedSlugs: ['d-anime-store-review', 'd-anime-store-vs-crunchyroll', 'd-anime-store-howto'],
     sections: [
       {

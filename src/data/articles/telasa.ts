@@ -8,7 +8,7 @@ export const articles: Article[] = [
     category: 'review',
     excerpt: 'テレビ朝日系列の作品が見放題のTELASAを徹底レビュー。特撮ファンや国内ドラマ好きにとって本当に価値があるのか、良い評判・悪い評判を交えて正直にお伝えするよ。',
     tags: ['TELASA', 'レビュー', '評判', 'テレビ朝日', '特撮', '仮面ライダー', 'VOD'],
-    publishedAt: '2026-04-30',
+    publishedAt: '2026-03-01',
     relatedSlugs: ['telasa-vs-hulu', 'telasa-cost', 'telasa-tokusatsu-recommend'],
     sections: [
       {
@@ -94,7 +94,7 @@ export const articles: Article[] = [
     category: 'comparison',
     excerpt: 'テレ朝特化のTELASAと日テレ系に強いHulu。国内ドラマ好きにとってどっちが正解なのか、料金・作品数・機能面から徹底比較するよ。',
     tags: ['TELASA', 'Hulu', '比較', '国内ドラマ', 'テレビ朝日', '日本テレビ', 'VOD'],
-    publishedAt: '2026-05-01',
+    publishedAt: '2026-03-01',
     relatedSlugs: ['telasa-review-2026', 'telasa-cost', 'telasa-tokusatsu-recommend'],
     sections: [
       {
@@ -184,7 +184,7 @@ export const articles: Article[] = [
     category: 'recommend',
     excerpt: 'TELASAは特撮ファンの聖地！仮面ライダー・スーパー戦隊シリーズの配信ラインナップを完全ガイド。初心者向けのおすすめ視聴順も紹介するよ。',
     tags: ['TELASA', '仮面ライダー', 'スーパー戦隊', '特撮', 'おすすめ', '見放題', 'ニチアサ'],
-    publishedAt: '2026-05-02',
+    publishedAt: '2026-03-01',
     relatedSlugs: ['telasa-review-2026', 'telasa-cost', 'telasa-vs-hulu'],
     sections: [
       {
@@ -274,7 +274,7 @@ export const articles: Article[] = [
     category: 'howto',
     excerpt: 'TELASAの登録方法を画像なしでもわかるくらい丁寧に解説。au/UQモバイルユーザー限定の特典やセットプランの情報もまとめたよ。',
     tags: ['TELASA', '登録方法', 'au', 'UQモバイル', '無料トライアル', '使い方', '解約'],
-    publishedAt: '2026-05-03',
+    publishedAt: '2026-03-01',
     relatedSlugs: ['telasa-review-2026', 'telasa-cost', 'telasa-vs-hulu'],
     sections: [
       {
@@ -366,7 +366,7 @@ export const articles: Article[] = [
     category: 'cost',
     excerpt: 'TELASAの月額618円は本当にお得なの？Netflix・Hulu・U-NEXTなど主要VODサービスと料金を徹底比較して、TELASAのコスパを検証するよ。',
     tags: ['TELASA', '料金', 'コスパ', '月額', '比較', 'VOD', 'サブスク'],
-    publishedAt: '2026-05-04',
+    publishedAt: '2026-03-01',
     relatedSlugs: ['telasa-review-2026', 'telasa-vs-hulu', 'telasa-howto'],
     sections: [
       {
