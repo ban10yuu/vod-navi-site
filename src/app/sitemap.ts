@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next';
-import { getAllArticles } from '@/lib/articles';
+import { getAllArticles, ARTICLES_PER_PAGE } from '@/lib/articles';
 import { serviceList } from '@/data/services';
 import { CATEGORY_LABELS, ServiceCategory } from '@/lib/types';
 
@@ -48,5 +48,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...staticPages, ...servicePages, ...categoryPages, ...articlePages];
+  const totalPages = Math.ceil(articles.length / ARTICLES_PER_PAGE);
+  const paginationPages: MetadataRoute.Sitemap = Array.from({ length: totalPages - 1 }, (_, i) => ({
+    url: `${BASE_URL}/page/${i + 2}/`,
+    lastModified: TODAY,
+    changeFrequency: 'daily' as const,
+    priority: 0.5,
+  }));
+
+  return [...staticPages, ...paginationPages, ...servicePages, ...categoryPages, ...articlePages];
 }

@@ -1,14 +1,16 @@
 import Link from 'next/link';
-import { getAllArticles } from '@/lib/articles';
+import { getPaginatedArticles } from '@/lib/articles';
 import { serviceList } from '@/data/services';
 import { getActiveCampaigns } from '@/data/campaigns';
 import ArticleCard from '@/components/ArticleCard';
+import AdBanner from '@/components/AdBanner';
 import Sidebar from '@/components/Sidebar';
 import CampaignBanner from '@/components/CampaignBanner';
+import Pagination from '@/components/Pagination';
 import ServiceIcon from '@/components/ServiceIcon';
 
 export default function Home() {
-  const articles = getAllArticles();
+  const { articles, totalPages, totalArticles } = getPaginatedArticles(1);
   const heroArticles = articles.slice(0, 3);
   const gridArticles = articles.slice(3);
   const campaigns = getActiveCampaigns().slice(0, 4);
@@ -86,11 +88,18 @@ export default function Home() {
               <span className="text-purple-600">●</span> 最新記事
             </h2>
             {gridArticles.length > 0 ? (
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {gridArticles.map(a => (
-                  <ArticleCard key={a.slug} article={a} />
-                ))}
-              </div>
+              <>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {gridArticles.map((a, i) => (
+                    <ArticleCard key={a.slug} article={a} />
+                  ))}
+                </div>
+                <AdBanner size="full" />
+                <Pagination currentPage={1} totalPages={totalPages} />
+                <p className="text-center text-xs text-slate-400 mt-3">
+                  全{totalArticles}件の記事
+                </p>
+              </>
             ) : (
               <div className="text-center py-16 text-slate-400">
                 <p className="text-5xl mb-4">🎬</p>

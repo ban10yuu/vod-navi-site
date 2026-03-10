@@ -68,6 +68,18 @@ export function getRelatedArticles(article: Article, limit = 5) {
     .filter(a => a.slug !== article.slug && (a.serviceSlug === article.serviceSlug || a.category === article.category))
     .slice(0, limit);
 }
+export const ARTICLES_PER_PAGE = 10;
+
+export function getPaginatedArticles(page: number) {
+  const start = (page - 1) * ARTICLES_PER_PAGE;
+  return {
+    articles: publishedArticles.slice(start, start + ARTICLES_PER_PAGE),
+    totalPages: Math.ceil(publishedArticles.length / ARTICLES_PER_PAGE),
+    currentPage: page,
+    totalArticles: publishedArticles.length,
+  };
+}
+
 export function getPopularArticles(limit = 10) { return publishedArticles.slice(0, limit); }
 export function getAllSlugs() { return allArticles.map(a => a.slug); }
 export function searchArticles(query: string) {
