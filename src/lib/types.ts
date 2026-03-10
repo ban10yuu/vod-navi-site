@@ -56,9 +56,9 @@ export const CATEGORY_LABELS: Record<ServiceCategory, string> = {
 };
 
 export const CATEGORY_COLORS: Record<ServiceCategory, string> = {
-  review: 'bg-purple-500/20 text-purple-300 border-purple-500/30',
-  comparison: 'bg-cyan-500/20 text-cyan-300 border-cyan-500/30',
-  recommend: 'bg-amber-500/20 text-amber-300 border-amber-500/30',
-  howto: 'bg-green-500/20 text-green-300 border-green-500/30',
-  cost: 'bg-rose-500/20 text-rose-300 border-rose-500/30',
+  review: 'bg-purple-50 text-purple-700 border-purple-200',
+  comparison: 'bg-cyan-50 text-cyan-700 border-cyan-200',
+  recommend: 'bg-amber-50 text-amber-700 border-amber-200',
+  howto: 'bg-green-50 text-green-700 border-green-200',
+  cost: 'bg-rose-50 text-rose-700 border-rose-200',
 };

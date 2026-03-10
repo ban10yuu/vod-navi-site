@@ -39,8 +39,8 @@ export default function CommentSection({ articleSlug }: { articleSlug: string })
   };
 
   return (
-    <div className="mt-10 bg-[#12121e] border border-[#252535] rounded-lg p-5">
-      <h3 className="font-black text-base text-white mb-4">コメント</h3>
+    <div className="mt-10 bg-white rounded-xl shadow-sm border border-gray-200 p-5">
+      <h3 className="font-black text-base text-slate-900 mb-4">コメント</h3>
 
       <form onSubmit={handleSubmit} className="mb-6">
         <input
@@ -48,18 +48,18 @@ export default function CommentSection({ articleSlug }: { articleSlug: string })
           value={name}
           onChange={e => setName(e.target.value)}
           placeholder="名前（任意）"
-          className="w-full bg-[#0a0a14] border border-[#252535] rounded-lg px-4 py-2 text-sm text-white placeholder-gray-600 mb-2 focus:outline-none focus:border-[#7c3aed]"
+          className="w-full bg-white border border-gray-200 rounded-lg px-4 py-2 text-sm text-slate-900 placeholder-slate-400 mb-2 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
         />
         <textarea
           value={text}
           onChange={e => setText(e.target.value)}
           placeholder="コメントを書く..."
           rows={3}
-          className="w-full bg-[#0a0a14] border border-[#252535] rounded-lg px-4 py-2 text-sm text-white placeholder-gray-600 mb-2 focus:outline-none focus:border-[#7c3aed] resize-none"
+          className="w-full bg-white border border-gray-200 rounded-lg px-4 py-2 text-sm text-slate-900 placeholder-slate-400 mb-2 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent resize-none"
         />
         <button
           type="submit"
-          className="text-sm font-bold text-white bg-[#7c3aed] hover:bg-[#6d28d9] px-5 py-2 rounded-lg transition-colors"
+          className="text-sm font-bold text-white bg-purple-600 hover:bg-purple-700 px-5 py-2 rounded-lg transition-colors"
         >
           投稿する
         </button>
@@ -68,17 +68,17 @@ export default function CommentSection({ articleSlug }: { articleSlug: string })
       {comments.length > 0 ? (
         <div className="space-y-3">
           {comments.map(c => (
-            <div key={c.id} className="bg-[#0a0a14] rounded-lg p-3 border border-[#252535]">
+            <div key={c.id} className="bg-gray-50 rounded-lg p-3 border border-gray-100">
               <div className="flex items-center gap-2 mb-1">
-                <span className="text-xs font-bold text-[#7c3aed]">{c.name}</span>
-                <span className="text-[10px] text-gray-600">{c.date}</span>
+                <span className="text-xs font-bold text-purple-600">{c.name}</span>
+                <span className="text-[10px] text-slate-400">{c.date}</span>
               </div>
-              <p className="text-sm text-gray-400">{c.text}</p>
+              <p className="text-sm text-slate-600">{c.text}</p>
             </div>
           ))}
         </div>
       ) : (
-        <p className="text-sm text-gray-600 text-center py-4">まだコメントはありません</p>
+        <p className="text-sm text-slate-400 text-center py-4">まだコメントはありません</p>
       )}
     </div>
   );

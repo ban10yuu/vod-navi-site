@@ -65,16 +65,16 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
     <div className="max-w-3xl mx-auto px-4 py-8">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       {/* Breadcrumb */}
-      <nav className="text-xs text-gray-600 mb-4 flex items-center gap-1 flex-wrap">
-        <Link href="/" className="hover:text-[#7c3aed] transition-colors">ホーム</Link>
+      <nav className="text-xs text-slate-500 mb-4 flex items-center gap-1 flex-wrap">
+        <Link href="/" className="hover:text-purple-600 transition-colors">ホーム</Link>
         <span>/</span>
         {service && (
           <>
-            <Link href={`/service/${service.slug}/`} className="hover:text-[#7c3aed] transition-colors">{service.title}</Link>
+            <Link href={`/service/${service.slug}/`} className="hover:text-purple-600 transition-colors">{service.title}</Link>
             <span>/</span>
           </>
         )}
-        <span className="text-gray-500 truncate">{article.title}</span>
+        <span className="text-slate-400 truncate">{article.title}</span>
       </nav>
 
       {/* Category + Date */}
@@ -82,24 +82,24 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
         <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full border ${catColor}`}>
           {catLabel}
         </span>
-        <span className="text-xs text-gray-600">{article.publishedAt}</span>
+        <span className="text-xs text-slate-400">{article.publishedAt}</span>
       </div>
 
       {/* Title */}
-      <h1 className="text-2xl md:text-3xl font-black text-white mb-4 leading-tight">
+      <h1 className="text-2xl md:text-3xl font-black text-slate-900 mb-4 leading-tight">
         {article.title}
       </h1>
-      <p className="text-sm text-gray-400 mb-6 leading-relaxed">{article.excerpt}</p>
+      <p className="text-sm text-slate-600 mb-6 leading-relaxed">{article.excerpt}</p>
 
       <AdBanner size="full" />
 
       {/* Table of contents */}
-      <div className="bg-[#12121e] border border-[#252535] rounded-lg p-4 mb-8">
-        <h2 className="font-bold text-sm text-white mb-2">目次</h2>
+      <div className="bg-gray-50 border border-gray-200 rounded-xl p-4 mb-8">
+        <h2 className="font-bold text-sm text-slate-900 mb-2">目次</h2>
         <ol className="space-y-1">
           {article.sections.map((sec, i) => (
             <li key={i}>
-              <a href={`#section-${i}`} className="text-xs text-gray-400 hover:text-[#7c3aed] transition-colors">
+              <a href={`#section-${i}`} className="text-xs text-slate-500 hover:text-purple-600 transition-colors">
                 {i + 1}. {sec.heading}
               </a>
             </li>
@@ -129,7 +129,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
       {/* Tags */}
       <div className="flex flex-wrap gap-2 my-6">
         {article.tags.map(tag => (
-          <span key={tag} className="text-xs px-2.5 py-1 bg-[#1a1a28] text-gray-500 rounded-full border border-[#252535]">
+          <span key={tag} className="text-xs px-2.5 py-1 bg-gray-100 text-slate-500 rounded-full">
             #{tag}
           </span>
         ))}
@@ -141,8 +141,8 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
       {/* Related articles */}
       {related.length > 0 && (
         <div className="mt-10">
-          <h2 className="font-black text-lg text-white mb-4 flex items-center gap-2">
-            <span className="text-[#7c3aed]">●</span> 関連記事
+          <h2 className="font-black text-lg text-slate-900 mb-4 flex items-center gap-2">
+            <span className="text-purple-600">●</span> 関連記事
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {related.map(a => (

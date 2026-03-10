@@ -2,7 +2,9 @@ import Link from 'next/link';
 import { getPopularArticles } from '@/lib/articles';
 import { serviceList } from '@/data/services';
 import { getActiveCampaigns } from '@/data/campaigns';
+import { getServiceBySlug } from '@/data/services';
 import AdBanner from './AdBanner';
+import ServiceIcon from '@/components/ServiceIcon';
 
 export default function Sidebar() {
   const popular = getPopularArticles(8);
@@ -15,27 +17,36 @@ export default function Sidebar() {
 
       {/* Active campaigns */}
       {campaigns.length > 0 && (
-        <div className="bg-[#12121e] border border-[#252535] rounded-lg p-4">
-          <h3 className="font-black text-sm text-white mb-3 flex items-center gap-2">
-            <span className="text-[#06b6d4]">●</span> キャンペーン情報
+        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-4">
+          <h3 className="font-bold text-sm text-slate-900 mb-3 flex items-center gap-2">
+            <span className="text-amber-500">●</span> キャンペーン情報
           </h3>
           <div className="space-y-2">
-            {campaigns.map(c => (
-              <a
-                key={c.slug}
-                href={c.url}
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-                className="block p-2 rounded-lg hover:bg-[#1a1a28] transition-colors"
-              >
-                <div className="flex items-center gap-2 mb-1">
-                  {c.badge && <span className="campaign-badge text-[8px]">{c.badge}</span>}
-                </div>
-                <p className="text-xs text-gray-400 font-bold">{c.title}</p>
-              </a>
-            ))}
+            {campaigns.map(c => {
+              const svc = getServiceBySlug(c.serviceSlug);
+              return (
+                <a
+                  key={c.slug}
+                  href={c.url}
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  className="block p-2.5 rounded-lg hover:bg-gray-50 transition-colors border-l-3"
+                  style={{ borderLeftColor: svc?.color ?? '#9333ea' }}
+                >
+                  <div className="flex items-center gap-2 mb-1">
+                    {svc && <ServiceIcon slug={svc.slug} size="xs" />}
+                    {c.badge && (
+                      <span className="text-[9px] font-bold bg-amber-50 text-amber-600 border border-amber-200 px-1.5 py-0.5 rounded">
+                        {c.badge}
+                      </span>
+                    )}
+                  </div>
+                  <p className="text-xs text-slate-600 font-bold">{c.title}</p>
+                </a>
+              );
+            })}
           </div>
-          <Link href="/campaigns/" className="block text-center text-xs text-[#7c3aed] hover:text-[#06b6d4] mt-3 transition-colors">
+          <Link href="/campaigns/" className="block text-center text-xs text-purple-600 hover:text-purple-800 mt-3 font-semibold transition-colors">
             すべてのキャンペーンを見る →
           </Link>
         </div>
@@ -43,21 +54,31 @@ export default function Sidebar() {
 
       {/* Popular articles ranking */}
       {popular.length > 0 && (
-        <div className="bg-[#12121e] border border-[#252535] rounded-lg p-4">
-          <h3 className="font-black text-sm text-white mb-3 flex items-center gap-2">
-            <span className="text-[#7c3aed]">●</span> 人気記事ランキング
+        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-4">
+          <h3 className="font-bold text-sm text-slate-900 mb-3 flex items-center gap-2">
+            <span className="text-purple-600">●</span> 人気記事ランキング
           </h3>
           <div className="space-y-2">
             {popular.map((article, i) => (
               <Link
                 key={article.slug}
                 href={`/article/${article.slug}/`}
-                className="flex items-start gap-2.5 group py-1"
+                className="flex items-start gap-2.5 group py-1.5"
               >
-                <span className={`rank-badge ${i === 0 ? 'rank-1' : i === 1 ? 'rank-2' : i === 2 ? 'rank-3' : 'rank-other'}`}>
+                <span
+                  className={`w-6 h-6 rounded-full flex items-center justify-center text-[11px] font-black shrink-0 ${
+                    i === 0
+                      ? 'bg-amber-400 text-white shadow-sm'
+                      : i === 1
+                        ? 'bg-gray-300 text-white shadow-sm'
+                        : i === 2
+                          ? 'bg-amber-600 text-white shadow-sm'
+                          : 'bg-gray-100 text-slate-400'
+                  }`}
+                >
                   {i + 1}
                 </span>
-                <span className="text-xs text-gray-400 group-hover:text-white transition-colors leading-snug line-clamp-2">
+                <span className="text-xs text-slate-600 group-hover:text-purple-600 transition-colors leading-snug line-clamp-2">
                   {article.title}
                 </span>
               </Link>
@@ -67,21 +88,23 @@ export default function Sidebar() {
       )}
 
       {/* All services */}
-      <div className="bg-[#12121e] border border-[#252535] rounded-lg p-4">
-        <h3 className="font-black text-sm text-white mb-3 flex items-center gap-2">
-          <span className="text-[#06b6d4]">●</span> サービス一覧
+      <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-4">
+        <h3 className="font-bold text-sm text-slate-900 mb-3 flex items-center gap-2">
+          <span className="text-cyan-500">●</span> サービス一覧
         </h3>
         <div className="space-y-1">
           {serviceList.map(s => (
             <Link
               key={s.slug}
               href={`/service/${s.slug}/`}
-              className="flex items-center gap-2 py-1 group"
+              className="flex items-center gap-2.5 py-1.5 group"
             >
-              <span className="w-2 h-2 rounded-full flex-shrink-0" style={{ backgroundColor: s.color }} />
-              <span className="text-xs text-gray-400 group-hover:text-white transition-colors">{s.title}</span>
+              <ServiceIcon slug={s.slug} size="xs" />
+              <span className="text-xs text-slate-600 group-hover:text-purple-600 transition-colors font-medium">{s.title}</span>
               {s.freeTrialDays > 0 && (
-                <span className="text-[9px] text-[#06b6d4] ml-auto">{s.freeTrialDays}日無料</span>
+                <span className="text-[9px] bg-purple-50 text-purple-600 font-semibold ml-auto px-1.5 py-0.5 rounded">
+                  {s.freeTrialDays}日無料
+                </span>
               )}
             </Link>
           ))}

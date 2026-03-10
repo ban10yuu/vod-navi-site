@@ -32,15 +32,15 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-8">
-      <nav className="text-xs text-gray-600 mb-6 flex items-center gap-1">
-        <Link href="/" className="hover:text-[#7c3aed] transition-colors">ホーム</Link>
+      <nav className="text-xs text-slate-500 mb-6 flex items-center gap-1">
+        <Link href="/" className="hover:text-purple-600 transition-colors">ホーム</Link>
         <span>/</span>
-        <span className="text-gray-500">{label}</span>
+        <span className="text-slate-400">{label}</span>
       </nav>
 
       <div className="flex flex-col lg:flex-row gap-8">
         <div className="flex-1">
-          <h1 className="text-2xl font-black text-white mb-6">{label}の記事一覧</h1>
+          <h1 className="text-2xl font-black text-slate-900 mb-6">{label}の記事一覧</h1>
 
           {articles.length > 0 ? (
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -49,9 +49,9 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
               ))}
             </div>
           ) : (
-            <div className="text-center py-12 text-gray-600">
+            <div className="text-center py-12 text-slate-400">
               <p className="text-4xl mb-3">📝</p>
-              <p className="font-bold">記事を準備中です</p>
+              <p className="font-bold text-slate-600">記事を準備中です</p>
             </div>
           )}
         </div>

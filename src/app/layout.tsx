@@ -94,7 +94,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
       </head>
-      <body className={notoSansJP.className}>
+      <body className={`${notoSansJP.className} antialiased min-h-screen flex flex-col bg-white text-slate-900`}>
         <div className="relative z-10 flex flex-col min-h-screen">
           <Header />
           <main className="flex-1">{children}</main>

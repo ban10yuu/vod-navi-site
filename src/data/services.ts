@@ -42,7 +42,7 @@ export const serviceList: ServiceInfo[] = [
     freeTrialDays: 30,
     genre: ['アニメ', '2.5次元', '特撮', 'バラエティ'],
     description: 'アニメ作品数トップクラス。月額550円の低価格でアニメ・2.5次元・特撮まで幅広くカバー。DMMポイント還元も魅力。',
-    color: '#1a1a2e',
+    color: '#6b3cc9',
     officialUrl: 'https://tv.dmm.com/',
   },
   {
@@ -174,7 +174,7 @@ export const serviceList: ServiceInfo[] = [
     freeTrialDays: 0,
     genre: ['サッカー', '野球', 'F1', '格闘技', 'ゴルフ'],
     description: 'スポーツ専門の動画配信サービス。Jリーグ全試合独占配信、MLB、F1、ボクシングなど130以上のスポーツコンテンツ。',
-    color: '#f8f523',
+    color: '#0d1b2a',
     officialUrl: 'https://www.dazn.com/ja-JP',
   },
   {

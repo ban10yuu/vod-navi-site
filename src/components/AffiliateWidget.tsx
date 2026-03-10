@@ -1,22 +1,21 @@
 import { ServiceInfo } from '@/lib/types';
 import { getAffiliateLinks } from '@/data/affiliates';
 import { getCampaignsByService } from '@/data/campaigns';
+import ServiceIcon from '@/components/ServiceIcon';
 
 export default function AffiliateWidget({ service }: { service: ServiceInfo }) {
   const links = getAffiliateLinks(service);
   const campaigns = getCampaignsByService(service.slug);
 
   return (
-    <div className="vod-card !border-[#7c3aed]/40 p-5 md:p-6 my-8">
+    <div className="bg-gradient-to-r from-purple-50 to-cyan-50 rounded-xl border border-gray-200 p-5 md:p-6 my-8">
       <div className="flex items-start gap-4 mb-4">
-        <div className="w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0 text-2xl" style={{ backgroundColor: service.color + '20' }}>
-          🎬
-        </div>
+        <ServiceIcon slug={service.slug} size="lg" />
         <div>
-          <h3 className="text-base font-black text-[#7c3aed]">
+          <h3 className="text-base font-black text-purple-600">
             {service.title}を始めるなら
           </h3>
-          <p className="text-xs text-gray-500">
+          <p className="text-xs text-slate-600">
             {service.freeTrialDays > 0
               ? `${service.freeTrialDays}日間無料でお試しできます`
               : '今すぐ登録して視聴開始'}
@@ -28,12 +27,16 @@ export default function AffiliateWidget({ service }: { service: ServiceInfo }) {
       {campaigns.length > 0 && (
         <div className="mb-4 space-y-2">
           {campaigns.map(c => (
-            <div key={c.slug} className="bg-[#1a1a28] rounded-lg p-3 border border-[#252535]">
+            <div key={c.slug} className="bg-white rounded-lg p-3 shadow-sm border border-gray-100">
               <div className="flex items-center gap-2 mb-1">
-                {c.badge && <span className="campaign-badge">{c.badge}</span>}
-                <span className="text-xs font-bold text-white">{c.title}</span>
+                {c.badge && (
+                  <span className="text-[9px] font-bold bg-amber-50 text-amber-600 border border-amber-200 px-1.5 py-0.5 rounded">
+                    {c.badge}
+                  </span>
+                )}
+                <span className="text-xs font-bold text-slate-900">{c.title}</span>
               </div>
-              <p className="text-[11px] text-gray-500">{c.description}</p>
+              <p className="text-[11px] text-slate-600">{c.description}</p>
             </div>
           ))}
         </div>
@@ -47,10 +50,10 @@ export default function AffiliateWidget({ service }: { service: ServiceInfo }) {
             href={link.url}
             target="_blank"
             rel="noopener noreferrer nofollow"
-            className="block w-full text-center font-bold text-sm text-white py-3 rounded-lg transition-all hover:brightness-110 hover:scale-[1.02]"
+            className="block w-full text-center font-bold text-sm text-white py-3 rounded-lg transition-all hover:brightness-110 hover:scale-[1.02] shadow-md"
             style={{
               backgroundColor: service.color,
-              boxShadow: `0 2px 8px ${service.color}40`,
+              boxShadow: `0 3px 10px ${service.color}30`,
             }}
           >
             {link.badge ? `${link.label}` : `${service.title}公式サイトへ`}
@@ -61,7 +64,7 @@ export default function AffiliateWidget({ service }: { service: ServiceInfo }) {
         ))}
       </div>
 
-      <p className="text-[10px] text-gray-600 mt-4 text-center">
+      <p className="text-[10px] text-slate-400 mt-4 text-center">
         ※ 当サイトはアフィリエイトプログラムに参加しています
       </p>
     </div>
