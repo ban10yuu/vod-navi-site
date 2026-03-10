@@ -6,6 +6,7 @@ import { getServiceBySlug } from '@/data/services';
 import { CATEGORY_LABELS, CATEGORY_COLORS } from '@/lib/types';
 import ArticleCard from '@/components/ArticleCard';
 import AdBanner from '@/components/AdBanner';
+import GoogleAd from '@/components/GoogleAd';
 import AffiliateWidget from '@/components/AffiliateWidget';
 import ServiceProductCard from '@/components/ServiceProductCard';
 import CommentSection from '@/components/CommentSection';
@@ -91,6 +92,11 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
       </h1>
       <p className="text-sm text-slate-600 mb-6 leading-relaxed">{article.excerpt}</p>
 
+      {/* Ad after excerpt */}
+      <div className="my-6">
+        <GoogleAd />
+      </div>
+
       <AdBanner size="full" />
 
       {/* Table of contents */}
@@ -107,6 +113,11 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
         </ol>
       </div>
 
+      {/* Ad after TOC */}
+      <div className="my-6">
+        <GoogleAd />
+      </div>
+
       {/* Article content */}
       <div className="article-content">
         {article.sections.map((sec, i) => (
@@ -114,11 +125,16 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
             <h2 id={`section-${i}`}>{sec.heading}</h2>
             <div dangerouslySetInnerHTML={{ __html: sec.content }} />
 
-            {i === 0 && <AdBanner size="medium" />}
+            {i === 0 && <><AdBanner size="medium" /><div className="my-6"><GoogleAd /></div></>}
             {i === 1 && service && <ServiceProductCard service={service} />}
-            {i === 2 && <AdBanner size="compact" />}
+            {i === 2 && <><AdBanner size="compact" /><div className="my-6"><GoogleAd /></div></>}
           </div>
         ))}
+      </div>
+
+      {/* Ad after article content */}
+      <div className="my-6">
+        <GoogleAd />
       </div>
 
       {/* Affiliate widget */}
@@ -135,8 +151,18 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
         ))}
       </div>
 
+      {/* Ad after tags */}
+      <div className="my-6">
+        <GoogleAd />
+      </div>
+
       {/* Comments */}
       <CommentSection articleSlug={article.slug} />
+
+      {/* Ad after comments */}
+      <div className="my-6">
+        <GoogleAd />
+      </div>
 
       {/* Related articles */}
       {related.length > 0 && (

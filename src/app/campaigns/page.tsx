@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { getActiveCampaigns } from '@/data/campaigns';
 import { getServiceBySlug } from '@/data/services';
+import GoogleAd from '@/components/GoogleAd';
 import Sidebar from '@/components/Sidebar';
 
 export const metadata: Metadata = {
@@ -25,6 +26,11 @@ export default function CampaignsPage() {
         <div className="flex-1">
           <h1 className="text-2xl font-black text-slate-900 mb-2">キャンペーン情報一覧</h1>
           <p className="text-sm text-slate-600 mb-6">各動画配信サービスの最新キャンペーン・割引・無料体験情報をまとめています。</p>
+
+          {/* Ad after heading */}
+          <div className="mb-6">
+            <GoogleAd />
+          </div>
 
           <div className="space-y-4">
             {campaigns.map(c => {
@@ -66,6 +72,11 @@ export default function CampaignsPage() {
                 </a>
               );
             })}
+          </div>
+
+          {/* Ad after campaigns list */}
+          <div className="my-6">
+            <GoogleAd />
           </div>
         </div>
 

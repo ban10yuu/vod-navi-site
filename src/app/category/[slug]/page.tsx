@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { CATEGORY_LABELS, ServiceCategory } from '@/lib/types';
 import { getArticlesByCategory } from '@/lib/articles';
 import ArticleCard from '@/components/ArticleCard';
+import GoogleAd from '@/components/GoogleAd';
 import Sidebar from '@/components/Sidebar';
 
 const categories = Object.keys(CATEGORY_LABELS) as ServiceCategory[];
@@ -42,6 +43,11 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
         <div className="flex-1">
           <h1 className="text-2xl font-black text-slate-900 mb-6">{label}の記事一覧</h1>
 
+          {/* Ad after heading */}
+          <div className="mb-6">
+            <GoogleAd />
+          </div>
+
           {articles.length > 0 ? (
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {articles.map(a => (
@@ -54,6 +60,11 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
               <p className="font-bold text-slate-600">記事を準備中です</p>
             </div>
           )}
+
+          {/* Ad after articles */}
+          <div className="my-6">
+            <GoogleAd />
+          </div>
         </div>
 
         <div className="lg:w-72 flex-shrink-0">

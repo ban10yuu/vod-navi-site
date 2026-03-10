@@ -6,6 +6,7 @@ import { getArticlesByService } from '@/lib/articles';
 import { getCampaignsByService } from '@/data/campaigns';
 import { CATEGORY_LABELS, ServiceCategory } from '@/lib/types';
 import ArticleCard from '@/components/ArticleCard';
+import GoogleAd from '@/components/GoogleAd';
 import ServiceProductCard from '@/components/ServiceProductCard';
 import CampaignBanner from '@/components/CampaignBanner';
 import Sidebar from '@/components/Sidebar';
@@ -102,6 +103,11 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             </div>
           </div>
 
+          {/* Ad after service header */}
+          <div className="my-6">
+            <GoogleAd />
+          </div>
+
           {/* Campaigns */}
           {campaigns.length > 0 && (
             <div className="mb-8">
@@ -116,7 +122,17 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             </div>
           )}
 
+          {/* Ad after campaigns */}
+          <div className="my-6">
+            <GoogleAd />
+          </div>
+
           <ServiceProductCard service={service} />
+
+          {/* Ad after ServiceProductCard */}
+          <div className="my-6">
+            <GoogleAd />
+          </div>
 
           {/* Category tabs */}
           <div className="flex gap-2 flex-wrap mb-4 mt-8">
@@ -144,6 +160,11 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               <p className="font-bold text-slate-600">記事を準備中です</p>
             </div>
           )}
+
+          {/* Ad after articles */}
+          <div className="my-6">
+            <GoogleAd />
+          </div>
         </div>
 
         {/* Sidebar */}

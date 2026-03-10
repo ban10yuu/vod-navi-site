@@ -4,6 +4,7 @@ import { serviceList } from '@/data/services';
 import { getActiveCampaigns } from '@/data/campaigns';
 import { getServiceBySlug } from '@/data/services';
 import AdBanner from './AdBanner';
+import GoogleAd from '@/components/GoogleAd';
 import ServiceIcon from '@/components/ServiceIcon';
 
 export default function Sidebar() {
@@ -52,6 +53,9 @@ export default function Sidebar() {
         </div>
       )}
 
+      {/* Ad between campaigns and popular articles */}
+      <GoogleAd format="rectangle" />
+
       {/* Popular articles ranking */}
       {popular.length > 0 && (
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-4">
@@ -87,6 +91,9 @@ export default function Sidebar() {
         </div>
       )}
 
+      {/* Ad after popular articles */}
+      <GoogleAd format="rectangle" />
+
       {/* All services */}
       <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-4">
         <h3 className="font-bold text-sm text-slate-900 mb-3 flex items-center gap-2">
@@ -110,6 +117,9 @@ export default function Sidebar() {
           ))}
         </div>
       </div>
+
+      {/* Ad at bottom of sidebar */}
+      <GoogleAd format="rectangle" />
     </aside>
   );
 }

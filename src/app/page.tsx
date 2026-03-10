@@ -4,6 +4,7 @@ import { serviceList } from '@/data/services';
 import { getActiveCampaigns } from '@/data/campaigns';
 import ArticleCard from '@/components/ArticleCard';
 import AdBanner from '@/components/AdBanner';
+import GoogleAd from '@/components/GoogleAd';
 import Sidebar from '@/components/Sidebar';
 import CampaignBanner from '@/components/CampaignBanner';
 import Pagination from '@/components/Pagination';
@@ -39,6 +40,11 @@ export default function Home() {
           )}
         </div>
       </section>
+
+      {/* Ad after hero */}
+      <div className="max-w-6xl mx-auto px-4 my-6">
+        <GoogleAd />
+      </div>
 
       {/* Service tags bar */}
       <section className="border-b border-gray-200 bg-white">
@@ -79,6 +85,11 @@ export default function Home() {
         </section>
       )}
 
+      {/* Ad after campaigns */}
+      <div className="max-w-6xl mx-auto px-4 mt-6">
+        <GoogleAd />
+      </div>
+
       {/* Main content + Sidebar */}
       <section className="max-w-6xl mx-auto px-4 mt-10 pb-10">
         <div className="flex flex-col lg:flex-row gap-8">
@@ -95,6 +106,9 @@ export default function Home() {
                   ))}
                 </div>
                 <AdBanner size="full" />
+                <div className="my-6">
+                  <GoogleAd />
+                </div>
                 <Pagination currentPage={1} totalPages={totalPages} />
                 <p className="text-center text-xs text-slate-400 mt-3">
                   全{totalArticles}件の記事

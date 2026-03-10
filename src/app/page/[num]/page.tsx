@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { getPaginatedArticles, ARTICLES_PER_PAGE, getAllArticles } from '@/lib/articles';
 import ArticleCard from '@/components/ArticleCard';
 import AdBanner from '@/components/AdBanner';
+import GoogleAd from '@/components/GoogleAd';
 import Sidebar from '@/components/Sidebar';
 import Pagination from '@/components/Pagination';
 
@@ -47,6 +48,11 @@ export default async function PaginatedPage({ params }: { params: Promise<{ num:
         <span className="text-slate-400">記事一覧 ({page}ページ目)</span>
       </nav>
 
+      {/* Ad after breadcrumb */}
+      <div className="mb-6">
+        <GoogleAd />
+      </div>
+
       <div className="flex flex-col lg:flex-row gap-8">
         <div className="flex-1">
           <h1 className="font-black text-lg text-slate-900 mb-4 flex items-center gap-2">
@@ -61,12 +67,15 @@ export default async function PaginatedPage({ params }: { params: Promise<{ num:
               <>
                 <ArticleCard key={a.slug} article={a} />
                 {/* 5記事ごとに広告を挿入（グリッド2列なので偶数位置で） */}
-                {i === 4 && <div key="ad-mid" className="sm:col-span-2"><AdBanner size="full" /></div>}
+                {i === 4 && <div key="ad-mid" className="sm:col-span-2"><AdBanner size="full" /><div className="mt-4"><GoogleAd /></div></div>}
               </>
             ))}
           </div>
 
           <AdBanner size="full" />
+          <div className="my-6">
+            <GoogleAd />
+          </div>
 
           <Pagination currentPage={page} totalPages={totalPages} />
           <p className="text-center text-xs text-slate-400 mt-3">
