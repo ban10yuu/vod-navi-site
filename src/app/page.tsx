@@ -22,7 +22,7 @@ export default function Home() {
   return (
     <>
       {/* Hero section */}
-      <section className="relative bg-gradient-to-b from-purple-50 via-white to-white py-12 md:py-16 overflow-hidden">
+      <section className="relative bg-gray-50 py-12 md:py-16 overflow-hidden">
         <div className="relative z-10 max-w-6xl mx-auto px-4">
           <div className="text-center mb-8">
             <h1 className="text-3xl md:text-4xl font-black text-slate-900 mb-3">
@@ -77,7 +77,7 @@ export default function Home() {
             <Link
               key={s.slug}
               href={`/service/${s.slug}/`}
-              className="bg-white rounded-xl border border-gray-200 p-3 hover:shadow-md hover:border-purple-200 transition-all group text-center"
+              className="bg-white rounded-xl border border-gray-200 p-3 hover:border-purple-200 transition-colors group text-center"
             >
               <ServiceIcon slug={s.slug} size="sm" />
               <p className="text-xs font-bold text-slate-900 group-hover:text-purple-600 transition-colors mt-1.5 truncate">
@@ -99,7 +99,7 @@ export default function Home() {
       {/* Campaigns */}
       {campaigns.length > 0 && (
         <section className="max-w-6xl mx-auto px-4 mt-8">
-          <div className="bg-purple-50/50 rounded-2xl p-6">
+          <div className="bg-purple-50/50 rounded-lg p-6">
             <div className="flex items-center justify-between mb-4">
               <h2 className="font-black text-lg text-slate-900 flex items-center gap-2">
                 <span className="text-purple-600">●</span> キャンペーン情報
@@ -132,7 +132,7 @@ export default function Home() {
             <Link
               key={key}
               href={`/category/${key}/`}
-              className={`rounded-xl border p-3 text-center hover:shadow-md transition-all ${CATEGORY_COLORS[key]}`}
+              className={`rounded-xl border p-3 text-center transition-colors ${CATEGORY_COLORS[key]}`}
             >
               <p className="text-sm font-bold">{label}</p>
             </Link>

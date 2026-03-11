@@ -19,38 +19,6 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  background-image: radial-gradient(circle, rgba(124, 58, 237, 0.04) 1px, transparent 1px);
-  background-size: 24px 24px;
-  pointer-events: none;
-  z-index: 0;
-}
-
-/* Hero cinema lines — subtle light gradient */
-.cinema-lines {
-  position: absolute;
-  inset: 0;
-  overflow: hidden;
-  pointer-events: none;
-}
-.cinema-lines::before,
-.cinema-lines::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  height: 60px;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), transparent);
-  z-index: 2;
-}
-.cinema-lines::before { top: 0; }
-.cinema-lines::after {
-  bottom: 0;
-  background: linear-gradient(to top, rgba(255, 255, 255, 0.8), transparent);
-}
 
 /* Card component */
 .vod-card {
@@ -118,8 +86,8 @@ body::before {
 
 /* Summary box */
 .summary-box {
-  background: linear-gradient(135deg, rgba(124, 58, 237, 0.06) 0%, rgba(6, 182, 212, 0.04) 100%);
-  border: 1px solid rgba(124, 58, 237, 0.15);
+  background: #faf5ff;
+  border: 1px solid #e9d5ff;
   border-radius: 12px;
   padding: 1.5rem;
   margin: 2rem 0;
@@ -154,8 +122,8 @@ body::before {
 
 /* Highlight box */
 .highlight-box {
-  background: linear-gradient(135deg, rgba(6, 182, 212, 0.08) 0%, rgba(59, 130, 246, 0.06) 100%);
-  border: 1px solid rgba(6, 182, 212, 0.2);
+  background: #f0f9ff;
+  border: 1px solid #bae6fd;
   border-radius: 12px;
   padding: 1.2rem 1.5rem;
   margin: 1.5rem 0;
@@ -184,7 +152,7 @@ body::before {
   font-weight: 800;
   padding: 3px 10px;
   border-radius: 999px;
-  background: linear-gradient(135deg, var(--color-primary), #3b82f6);
+  background: var(--color-primary);
   color: #fff;
   letter-spacing: 0.05em;
 }
@@ -218,9 +186,9 @@ body::before {
   color: #fff;
   flex-shrink: 0;
 }
-.rank-1 { background: linear-gradient(135deg, #fbbf24, #f59e0b); box-shadow: 0 2px 8px rgba(245, 158, 11, 0.35); }
-.rank-2 { background: linear-gradient(135deg, #9ca3af, #6b7280); }
-.rank-3 { background: linear-gradient(135deg, #d97706, #b45309); }
+.rank-1 { background: #f59e0b; }
+.rank-2 { background: #6b7280; }
+.rank-3 { background: #b45309; }
 .rank-other { background: #e2e8f0; color: #64748b; }
 
 /* Light scrollbar */

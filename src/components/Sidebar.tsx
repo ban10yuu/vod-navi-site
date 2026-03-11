@@ -22,7 +22,7 @@ export default function Sidebar() {
 
       {/* Active campaigns */}
       {campaigns.length > 0 && (
-        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-4">
+        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4">
           <h3 className="font-bold text-sm text-slate-900 mb-3 flex items-center gap-2">
             <span className="text-amber-500">●</span> キャンペーン情報
           </h3>
@@ -62,7 +62,7 @@ export default function Sidebar() {
 
       {/* Popular articles ranking (10 articles) */}
       {popular.length > 0 && (
-        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-4">
+        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4">
           <h3 className="font-bold text-sm text-slate-900 mb-3 flex items-center gap-2">
             <span className="text-purple-600">●</span> 人気記事ランキング
           </h3>
@@ -76,11 +76,11 @@ export default function Sidebar() {
                 <span
                   className={`w-6 h-6 rounded-full flex items-center justify-center text-[11px] font-black shrink-0 ${
                     i === 0
-                      ? 'bg-amber-400 text-white shadow-sm'
+                      ? 'bg-amber-400 text-white'
                       : i === 1
-                        ? 'bg-gray-300 text-white shadow-sm'
+                        ? 'bg-gray-300 text-white'
                         : i === 2
-                          ? 'bg-amber-600 text-white shadow-sm'
+                          ? 'bg-amber-600 text-white'
                           : 'bg-gray-100 text-slate-400'
                   }`}
                 >
@@ -99,7 +99,7 @@ export default function Sidebar() {
       <GoogleAd format="rectangle" />
 
       {/* Category links */}
-      <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-4">
+      <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4">
         <h3 className="font-bold text-sm text-slate-900 mb-3 flex items-center gap-2">
           <span className="text-green-500">●</span> カテゴリ
         </h3>
@@ -108,7 +108,7 @@ export default function Sidebar() {
             <Link
               key={key}
               href={`/category/${key}/`}
-              className={`block text-xs font-bold px-3 py-1.5 rounded-lg border hover:opacity-80 transition-opacity ${CATEGORY_COLORS[key]}`}
+              className={`block text-xs font-bold px-3 py-1.5 rounded-lg border transition-colors ${CATEGORY_COLORS[key]}`}
             >
               {label}
             </Link>
@@ -118,7 +118,7 @@ export default function Sidebar() {
 
       {/* Popular tags */}
       {popularTags.length > 0 && (
-        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-4">
+        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4">
           <h3 className="font-bold text-sm text-slate-900 mb-3 flex items-center gap-2">
             <span className="text-amber-500">●</span> 人気タグ
           </h3>
@@ -127,7 +127,7 @@ export default function Sidebar() {
               <Link
                 key={t.slug}
                 href={`/tag/${t.slug}/`}
-                className="text-[10px] px-2 py-0.5 rounded bg-gray-100 text-slate-500 hover:text-purple-600 hover:bg-purple-50 transition-colors"
+                className="text-[10px] px-2 py-0.5 rounded bg-gray-100 text-slate-500 hover:text-purple-600 transition-colors"
               >
                 #{t.tag}
               </Link>
@@ -140,7 +140,7 @@ export default function Sidebar() {
       )}
 
       {/* All services */}
-      <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-4">
+      <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4">
         <h3 className="font-bold text-sm text-slate-900 mb-3 flex items-center gap-2">
           <span className="text-cyan-500">●</span> サービス一覧
         </h3>

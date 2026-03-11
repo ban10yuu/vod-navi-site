@@ -15,7 +15,7 @@ export default function Header() {
   const results = query.length >= 2 ? searchArticles(query).slice(0, 5) : [];
 
   return (
-    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-gray-100 shadow-sm">
+    <header className="sticky top-0 z-50 bg-white border-b border-gray-100 shadow-sm">
       <div className="max-w-6xl mx-auto px-4 h-14 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 group">
@@ -41,7 +41,7 @@ export default function Header() {
               </svg>
             </button>
             {serviceDropdown && (
-              <div className="absolute top-full left-0 mt-2 w-60 bg-white shadow-lg border border-gray-100 rounded-xl py-2 max-h-80 overflow-y-auto">
+              <div className="absolute top-full left-0 mt-2 w-60 bg-white shadow-md border border-gray-100 rounded-xl py-2 max-h-80 overflow-y-auto">
                 {serviceList.map(s => (
                   <Link
                     key={s.slug}

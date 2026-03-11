@@ -9,10 +9,7 @@ export default function ArticleCard({ article }: { article: Article }) {
   const catColor = CATEGORY_COLORS[article.category];
 
   return (
-    <div className="group bg-white rounded-xl shadow-sm hover:shadow-md transition-all overflow-hidden">
-      {/* Color bar */}
-      <div className="h-1" style={{ background: service?.color || '#7c3aed' }} />
-
+    <div className="group bg-white rounded-xl shadow-sm hover:shadow-md transition-colors overflow-hidden">
       <div className="p-4">
         {/* Category + Service */}
         <div className="flex items-center gap-2 mb-2">
@@ -51,7 +48,7 @@ export default function ArticleCard({ article }: { article: Article }) {
               <Link
                 key={tag}
                 href={`/tag/${encodeURIComponent(tag.toLowerCase().replace(/\s+/g, '-'))}/`}
-                className="text-[9px] px-1.5 py-0.5 bg-gray-100 text-slate-500 rounded hover:bg-purple-50 hover:text-purple-600 transition-colors"
+                className="text-[9px] px-1.5 py-0.5 bg-gray-100 text-slate-500 rounded hover:text-purple-600 transition-colors"
               >
                 {tag}
               </Link>
