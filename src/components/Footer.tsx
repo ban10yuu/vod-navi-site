@@ -91,6 +91,11 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-gray-200 mt-8 pt-6">
+          <div className="flex items-center justify-center gap-3 mb-3 text-xs">
+            <Link href="/privacy/" className="text-slate-500 hover:text-purple-600 transition-colors">プライバシーポリシー</Link>
+            <span className="text-slate-300">|</span>
+            <Link href="/contact/" className="text-slate-500 hover:text-purple-600 transition-colors">お問い合わせ</Link>
+          </div>
           <p className="text-center text-xs text-slate-400 leading-relaxed">
             &copy; 2026 動画配信ナビ. 当サイトはアフィリエイトプログラムに参加しています。
             <br />
