@@ -1,3 +1,8 @@
 User-agent: *
 Allow: /
+
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
 Sitemap: https://vod-navi-site.vercel.app/sitemap.xml

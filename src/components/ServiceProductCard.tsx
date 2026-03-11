@@ -1,9 +1,12 @@
 import { ServiceInfo } from '@/lib/types';
 import { getCampaignsByService } from '@/data/campaigns';
+import { getMoshimoRakutenUrl, MOSHIMO_IMPRESSION_URL } from '@/data/affiliates';
 import ServiceIcon from '@/components/ServiceIcon';
 
 export default function ServiceProductCard({ service }: { service: ServiceInfo }) {
   const campaigns = getCampaignsByService(service.slug);
+  const isMoshimo = service.slug === 'rakuten-tv';
+  const ctaUrl = isMoshimo ? getMoshimoRakutenUrl(service.officialUrl) : service.officialUrl;
 
   return (
     <div className="my-10 bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden" style={{ borderLeftWidth: '4px', borderLeftColor: service.color }}>
@@ -71,7 +74,7 @@ export default function ServiceProductCard({ service }: { service: ServiceInfo }
 
         {/* CTA button */}
         <a
-          href={service.officialUrl}
+          href={ctaUrl}
           target="_blank"
           rel="noopener noreferrer nofollow"
           className="block w-full text-center font-bold text-sm text-white py-3.5 rounded-lg transition-all hover:brightness-110 hover:scale-[1.02] shadow-md"
@@ -85,6 +88,11 @@ export default function ServiceProductCard({ service }: { service: ServiceInfo }
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
           </svg>
         </a>
+        {/* もしもアフィリエイト インプレッショントラッキング */}
+        {isMoshimo && (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img src={MOSHIMO_IMPRESSION_URL} width={1} height={1} style={{ border: 'none' }} alt="" loading="lazy" />
+        )}
       </div>
 
       <p className="text-[9px] text-slate-400 text-center pb-3">

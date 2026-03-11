@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next';
-import { getAllArticles, ARTICLES_PER_PAGE } from '@/lib/articles';
+import { getAllArticles, getAllTags, ARTICLES_PER_PAGE } from '@/lib/articles';
 import { serviceList } from '@/data/services';
 import { CATEGORY_LABELS, ServiceCategory } from '@/lib/types';
 
@@ -11,6 +11,7 @@ const TODAY = new Date().toISOString().slice(0, 10);
 export default function sitemap(): MetadataRoute.Sitemap {
   const articles = getAllArticles();
   const categories = Object.keys(CATEGORY_LABELS) as ServiceCategory[];
+  const tags = getAllTags();
 
   const staticPages: MetadataRoute.Sitemap = [
     {
@@ -24,6 +25,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: TODAY,
       changeFrequency: 'daily',
       priority: 0.7,
+    },
+    {
+      url: `${BASE_URL}/tags/`,
+      lastModified: TODAY,
+      changeFrequency: 'weekly',
+      priority: 0.6,
     },
   ];
 
@@ -41,6 +48,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
+  const tagPages: MetadataRoute.Sitemap = tags.map(t => ({
+    url: `${BASE_URL}/tag/${t.slug}/`,
+    lastModified: TODAY,
+    changeFrequency: 'weekly' as const,
+    priority: 0.5,
+  }));
+
   const articlePages: MetadataRoute.Sitemap = articles.map(a => ({
     url: `${BASE_URL}/article/${a.slug}/`,
     lastModified: a.publishedAt,
@@ -56,5 +70,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.5,
   }));
 
-  return [...staticPages, ...paginationPages, ...servicePages, ...categoryPages, ...articlePages];
+  return [...staticPages, ...paginationPages, ...servicePages, ...categoryPages, ...tagPages, ...articlePages];
 }

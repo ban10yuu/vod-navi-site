@@ -1,5 +1,14 @@
 import { ServiceInfo, AffiliateLink } from '@/lib/types';
 
+// もしもアフィリエイト設定
+export const MOSHIMO_A_ID = '5417189';
+
+export function getMoshimoRakutenUrl(targetUrl: string): string {
+  return `https://af.moshimo.com/af/c/click?a_id=${MOSHIMO_A_ID}&p_id=54&pc_id=54&pl_id=616&url=${encodeURIComponent(targetUrl)}`;
+}
+
+export const MOSHIMO_IMPRESSION_URL = `https://i.moshimo.com/af/i/impression?a_id=${MOSHIMO_A_ID}&p_id=54&pc_id=54&pl_id=616`;
+
 export function getAffiliateLinks(service: ServiceInfo): AffiliateLink[] {
   const links: AffiliateLink[] = [];
 
@@ -82,6 +91,15 @@ export function getAffiliateLinks(service: ServiceInfo): AffiliateLink[] {
         badge: '31日間無料',
       });
       break;
+    case 'rakuten-tv':
+      links.push({
+        service: 'rakuten-tv',
+        label: 'Rakuten TV 公式サイト',
+        url: getMoshimoRakutenUrl(service.officialUrl),
+        badge: 'ポイント還元',
+        moshimo: true,
+      });
+      break;
     default:
       links.push({
         service: service.slug,
@@ -111,5 +129,12 @@ export const generalAffiliates = [
     label: 'DMM TV｜アニメ見るならココ',
     url: 'https://tv.dmm.com/',
     badge: 'アニメ特化',
+  },
+  {
+    service: 'rakuten-tv',
+    label: 'Rakuten TV｜楽天ポイントで視聴',
+    url: getMoshimoRakutenUrl('https://tv.rakuten.co.jp/'),
+    badge: 'ポイント還元',
+    moshimo: true,
   },
 ];

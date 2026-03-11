@@ -11,6 +11,7 @@ import ServiceProductCard from '@/components/ServiceProductCard';
 import CampaignBanner from '@/components/CampaignBanner';
 import Sidebar from '@/components/Sidebar';
 import ServiceIcon from '@/components/ServiceIcon';
+import { BreadcrumbJsonLd, ServicePageJsonLd } from '@/components/JsonLd';
 
 export async function generateStaticParams() {
   return serviceList.map(s => ({ slug: s.slug }));
@@ -20,9 +21,29 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const service = getServiceBySlug(slug);
   if (!service) return {};
+  const priceText = service.monthlyPrice > 0 ? `月額${service.monthlyPrice.toLocaleString()}円` : '無料';
+  const trialText = service.freeTrialDays > 0 ? `${service.freeTrialDays}日間無料体験あり。` : '';
+  const description = `${service.title}の評判・口コミ・料金を徹底レビュー。${priceText}。${trialText}${service.description}`;
   return {
-    title: `${service.title}の評判・レビュー・キャンペーン`,
-    description: service.description,
+    title: `${service.title}の評判・料金・無料体験｜徹底レビュー`,
+    description,
+    keywords: [
+      `${service.title} 評判`, `${service.title} 料金`, `${service.title} 口コミ`,
+      `${service.title} 無料体験`, `${service.title} おすすめ`, `${service.title} 解約`,
+      `${service.title} レビュー`, `${service.title} 比較`,
+    ],
+    openGraph: {
+      title: `${service.title}の評判・料金・無料体験`,
+      description,
+      type: 'website',
+      siteName: '動画配信ナビ',
+      locale: 'ja_JP',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${service.title}の評判・料金・無料体験`,
+      description,
+    },
     alternates: { canonical: `https://vod-navi-site.vercel.app/service/${slug}/` },
   };
 }
@@ -36,34 +57,17 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
   const campaigns = getCampaignsByService(slug);
   const categories = Object.entries(CATEGORY_LABELS) as [ServiceCategory, string][];
 
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@graph': [
-      {
-        '@type': 'Product',
-        name: service.title,
-        description: service.description,
-        category: '動画配信サービス',
-        offers: {
-          '@type': 'Offer',
-          price: service.monthlyPrice,
-          priceCurrency: 'JPY',
-          availability: 'https://schema.org/InStock',
-        },
-      },
-      {
-        '@type': 'BreadcrumbList',
-        itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'ホーム', item: 'https://vod-navi-site.vercel.app/' },
-          { '@type': 'ListItem', position: 2, name: service.title },
-        ],
-      },
-    ],
-  };
+  const BASE_URL = 'https://vod-navi-site.vercel.app';
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-8">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <ServicePageJsonLd service={service} />
+      <BreadcrumbJsonLd
+        items={[
+          { name: 'ホーム', url: `${BASE_URL}/` },
+          { name: service.title },
+        ]}
+      />
       {/* Breadcrumb */}
       <nav className="text-xs text-slate-500 mb-6 flex items-center gap-1">
         <Link href="/" className="hover:text-purple-600 transition-colors">ホーム</Link>

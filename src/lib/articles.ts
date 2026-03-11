@@ -90,3 +90,47 @@ export function searchArticles(query: string) {
     a.tags.some(t => t.toLowerCase().includes(q))
   );
 }
+
+/** Get all unique tags with their article counts, sorted by count descending */
+export function getAllTags(): { tag: string; count: number; slug: string }[] {
+  const tagMap = new Map<string, number>();
+  for (const a of publishedArticles) {
+    for (const t of a.tags) {
+      tagMap.set(t, (tagMap.get(t) || 0) + 1);
+    }
+  }
+  return Array.from(tagMap.entries())
+    .map(([tag, count]) => ({
+      tag,
+      count,
+      slug: encodeURIComponent(tag.toLowerCase().replace(/\s+/g, '-')),
+    }))
+    .sort((a, b) => b.count - a.count);
+}
+
+/** Get all unique tag slugs for static param generation */
+export function getAllTagSlugs(): string[] {
+  const tags = getAllTags();
+  return tags.map(t => t.slug);
+}
+
+/** Get articles by tag (case-insensitive match) */
+export function getArticlesByTag(tagSlug: string): Article[] {
+  const decodedSlug = decodeURIComponent(tagSlug);
+  return publishedArticles.filter(a =>
+    a.tags.some(t => t.toLowerCase().replace(/\s+/g, '-') === decodedSlug)
+  );
+}
+
+/** Get the display name of a tag from its slug */
+export function getTagDisplayName(tagSlug: string): string | undefined {
+  const decodedSlug = decodeURIComponent(tagSlug);
+  for (const a of publishedArticles) {
+    for (const t of a.tags) {
+      if (t.toLowerCase().replace(/\s+/g, '-') === decodedSlug) {
+        return t;
+      }
+    }
+  }
+  return undefined;
+}

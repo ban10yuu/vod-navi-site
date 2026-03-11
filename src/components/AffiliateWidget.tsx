@@ -1,5 +1,5 @@
 import { ServiceInfo } from '@/lib/types';
-import { getAffiliateLinks } from '@/data/affiliates';
+import { getAffiliateLinks, MOSHIMO_IMPRESSION_URL } from '@/data/affiliates';
 import { getCampaignsByService } from '@/data/campaigns';
 import ServiceIcon from '@/components/ServiceIcon';
 
@@ -67,6 +67,12 @@ export default function AffiliateWidget({ service }: { service: ServiceInfo }) {
       <p className="text-[10px] text-slate-400 mt-4 text-center">
         ※ 当サイトはアフィリエイトプログラムに参加しています
       </p>
+
+      {/* もしもアフィリエイト インプレッショントラッキング */}
+      {links.some(l => l.moshimo) && (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img src={MOSHIMO_IMPRESSION_URL} width={1} height={1} style={{ border: 'none' }} alt="" loading="lazy" />
+      )}
     </div>
   );
 }

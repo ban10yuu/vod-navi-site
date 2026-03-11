@@ -45,6 +45,7 @@ export interface AffiliateLink {
   label: string;
   url: string;
   badge?: string;
+  moshimo?: boolean;
 }
 
 export const CATEGORY_LABELS: Record<ServiceCategory, string> = {

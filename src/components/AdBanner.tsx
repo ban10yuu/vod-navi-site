@@ -1,11 +1,12 @@
 'use client';
 
-import { generalAffiliates } from '@/data/affiliates';
+import { generalAffiliates, MOSHIMO_IMPRESSION_URL } from '@/data/affiliates';
 
 type Size = 'full' | 'medium' | 'compact';
 
 export default function AdBanner({ size = 'full' }: { size?: Size }) {
   const ad = generalAffiliates[Math.floor(Math.random() * generalAffiliates.length)];
+  const hasMoshimo = 'moshimo' in ad && ad.moshimo;
 
   if (size === 'compact') {
     return (
@@ -18,6 +19,7 @@ export default function AdBanner({ size = 'full' }: { size?: Size }) {
         >
           PR: {ad.label}
         </a>
+        {hasMoshimo && <img src={MOSHIMO_IMPRESSION_URL} width={1} height={1} style={{ border: 'none' }} alt="" loading="lazy" />}
       </div>
     );
   }
@@ -39,6 +41,7 @@ export default function AdBanner({ size = 'full' }: { size?: Size }) {
             詳しく見る
           </a>
         </div>
+        {hasMoshimo && <img src={MOSHIMO_IMPRESSION_URL} width={1} height={1} style={{ border: 'none' }} alt="" loading="lazy" />}
       </div>
     );
   }
@@ -61,6 +64,7 @@ export default function AdBanner({ size = 'full' }: { size?: Size }) {
       >
         無料で始める →
       </a>
+      {hasMoshimo && <img src={MOSHIMO_IMPRESSION_URL} width={1} height={1} style={{ border: 'none' }} alt="" loading="lazy" />}
     </div>
   );
 }
