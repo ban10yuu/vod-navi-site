@@ -101,6 +101,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-V11MKY0X3F');`,
           }}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'WebSite',
+              name: '動画配信ナビ',
+              url: 'https://vod-navi-site.vercel.app',
+            }),
+          }}
+        />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
       </head>
       <body className={`${notoSansJP.className} antialiased min-h-screen flex flex-col bg-white text-slate-900`}>
         <div className="relative z-10 flex flex-col min-h-screen">
