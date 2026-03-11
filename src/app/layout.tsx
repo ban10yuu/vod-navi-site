@@ -80,6 +80,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://vod-navi-site.vercel.app',
   },
+  verification: {
+    google: 'QNT_EwkmJ039_aVzqr1sKc_hySyn-ZpgLZDtAgxtsNo',
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
