@@ -3,6 +3,13 @@ import { ServiceInfo, AffiliateLink } from '@/lib/types';
 // もしもアフィリエイト設定
 export const MOSHIMO_A_ID = '5417189';
 
+// A8.net a8mat codes (承認済みプログラム)
+const A8_AMEBA_MANGA = '4AZCG7+ATYY0I+4RKY+60H7L';
+
+function a8Link(a8mat: string): string {
+  return `https://px.a8.net/svt/ejp?a8mat=${a8mat}`;
+}
+
 export function getMoshimoRakutenUrl(targetUrl: string): string {
   return `https://af.moshimo.com/af/c/click?a_id=${MOSHIMO_A_ID}&p_id=54&pc_id=54&pl_id=616&url=${encodeURIComponent(targetUrl)}`;
 }
@@ -134,6 +141,19 @@ export const generalAffiliates = [
     service: 'rakuten-tv',
     label: 'Rakuten TV｜楽天ポイントで視聴',
     url: getMoshimoRakutenUrl('https://tv.rakuten.co.jp/'),
+    badge: 'ポイント還元',
+    moshimo: true,
+  },
+  {
+    service: 'ameba-manga',
+    label: 'Amebaマンガ｜100冊40%OFF',
+    url: a8Link(A8_AMEBA_MANGA),
+    badge: '原作も読む',
+  },
+  {
+    service: 'rakuten-books',
+    label: '楽天ブックス｜ポイント還元',
+    url: getMoshimoRakutenUrl('https://books.rakuten.co.jp/'),
     badge: 'ポイント還元',
     moshimo: true,
   },
