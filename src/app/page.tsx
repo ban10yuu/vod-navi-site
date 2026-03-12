@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { getPaginatedArticles, getAllTags } from '@/lib/articles';
+import { getPaginatedArticles, getAllTags, getAllArticles } from '@/lib/articles';
 import { serviceList } from '@/data/services';
 import { getActiveCampaigns } from '@/data/campaigns';
 import { CATEGORY_LABELS, CATEGORY_COLORS, ServiceCategory } from '@/lib/types';
@@ -121,6 +121,46 @@ export default function Home() {
       <div className="max-w-6xl mx-auto px-4 mt-6">
         <GoogleAd />
       </div>
+
+      {/* 人気記事ランキング — SEO内部リンク強化 */}
+      <section className="max-w-6xl mx-auto px-4 mt-8">
+        <h2 className="font-black text-lg text-slate-900 mb-4 flex items-center gap-2">
+          <span className="text-purple-600">●</span> 人気記事ランキング
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+          {(() => {
+            const allArticles = getAllArticles();
+            const seenServices = new Set<string>();
+            const popularArticles: typeof allArticles = [];
+            for (const a of allArticles) {
+              if (popularArticles.length >= 8) break;
+              if (seenServices.has(a.serviceSlug) && popularArticles.length < 5) continue;
+              popularArticles.push(a);
+              seenServices.add(a.serviceSlug);
+            }
+            return popularArticles.map((a, idx) => {
+              const service = serviceList.find(s => s.slug === a.serviceSlug);
+              return (
+                <Link
+                  key={a.slug}
+                  href={`/article/${a.slug}/`}
+                  className="group flex items-start gap-3 bg-white rounded-xl border border-gray-200 p-3 hover:border-purple-200 transition-colors"
+                >
+                  <span className="text-lg font-black text-purple-400 flex-shrink-0 w-6 text-right">
+                    {idx + 1}
+                  </span>
+                  <div className="min-w-0">
+                    <span className="text-[10px] text-slate-400">{service?.title}</span>
+                    <h3 className="text-xs font-bold text-slate-800 group-hover:text-purple-600 transition-colors line-clamp-2 leading-snug mt-0.5">
+                      {a.title}
+                    </h3>
+                  </div>
+                </Link>
+              );
+            });
+          })()}
+        </div>
+      </section>
 
       {/* Category section */}
       <section className="max-w-6xl mx-auto px-4 mt-8">
