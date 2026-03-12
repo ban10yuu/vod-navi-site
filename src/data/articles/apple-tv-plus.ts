@@ -684,7 +684,7 @@ Apple TV+のドラマは初回に2〜3話を一挙公開し、その後は毎週
 <p>この記事では、Netflix・Disney+・Amazon Prime Video・U-NEXTの4大サービスとApple TV+を多角的に比較し、それぞれの最適なユーザー像を明確にしていきます。</p>
 <div class="summary-box" data-title="比較する5サービスの基本情報">
 <p>Amazon Prime Video：月額600円 / 作品数多 / プライム特典付き</p>
-<p>Netflix（広告付き）：月額790円 / 最大の作品数 / オリジナル強い</p>
+<p>Netflix（広告付き）：月額890円 / 最大の作品数 / オリジナル強い</p>
 <p>Apple TV+：月額900円 / 完全オリジナル / 質の高さが特徴</p>
 <p>Disney+：月額990円 / マーベル・SW・ディズニー / ファミリー向け</p>
 <p>U-NEXT：月額2,189円 / 32万本以上 / ポイント付与あり</p>

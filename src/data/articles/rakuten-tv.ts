@@ -669,7 +669,7 @@ export const articles: Article[] = [
 
 <p>でも正直、<span class="marker-gold">Rakuten TVが全員にとってベストかと言われると、そうではない</span>。使い方や視聴頻度によって、最適なサービスは変わってくるんだ。この記事では、主要4サービスとの比較を通じて、Rakuten TVがあなたにとって正しい選択なのかを明確にしていくよ。</p>
 
-<div class="summary-box" data-title="比較する5サービスの料金モデル"><p>Rakuten TV：月額0円＋都度課金（レンタル300〜550円/本）</p><p>Amazon Prime Video：月額600円（見放題＋レンタル可）</p><p>Netflix（広告付き）：月額790円（見放題）</p><p>Hulu：月額1,026円（見放題）</p><p>U-NEXT：月額2,189円（見放題＋1,200ptポイント付与）</p></div>
+<div class="summary-box" data-title="比較する5サービスの料金モデル"><p>Rakuten TV：月額0円＋都度課金（レンタル300〜550円/本）</p><p>Amazon Prime Video：月額600円（見放題＋レンタル可）</p><p>Netflix（広告付き）：月額890円（見放題）</p><p>Hulu：月額1,026円（見放題）</p><p>U-NEXT：月額2,189円（見放題＋1,200ptポイント付与）</p></div>
 
 <p>この比較で大事なのは「月に何本の動画を見るか」という視聴頻度。ここが損益分岐点を決める最大のファクターになるよ。</p>`
       },
@@ -691,7 +691,7 @@ export const articles: Article[] = [
         heading: 'Rakuten TV vs Netflix & Hulu｜定額制サービスとの根本的な違い',
         content: `<p>NetflixやHuluとの比較は、<span class="marker">「定額制 vs 都度課金」という根本的なビジネスモデルの違い</span>を理解することから始まるよ。</p>
 
-<p><strong>Netflixとの比較</strong><br>Netflixは月額790円（広告付き）〜で膨大な作品が見放題。オリジナル作品のクオリティも高く、「何か面白いものない？」と思ったときにいつでもアクセスできる安心感がある。Rakuten TVには、このような「いつでも好きなだけ見られる」体験はないんだ。</p>
+<p><strong>Netflixとの比較</strong><br>Netflixは月額890円（広告付き）〜で膨大な作品が見放題。オリジナル作品のクオリティも高く、「何か面白いものない？」と思ったときにいつでもアクセスできる安心感がある。Rakuten TVには、このような「いつでも好きなだけ見られる」体験はないんだ。</p>
 
 <p><strong>Huluとの比較</strong><br>Huluは月額1,026円で、日本のテレビドラマの見逃し配信に強い。日テレ系のドラマが中心で、<span class="marker-gold">地上波ドラマをよく見る人にはHuluの方が圧倒的に便利</span>。Rakuten TVはテレビドラマの見逃し配信には非対応だよ。</p>
 

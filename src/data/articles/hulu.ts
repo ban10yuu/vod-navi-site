@@ -108,9 +108,9 @@ export const articles: Article[] = [
         heading: '料金プランを比較｜50円差の中身は？',
         content: `<p>まずはお金の話から。HuluとFOD Premiumの月額料金は実はそんなに変わらないんだけど、中身をよく見ると違いがあるんだ。</p>
 
-<div class="summary-box" data-title="料金比較"><p>Hulu：月額1,026円（税込）</p><p>FOD Premium：月額976円（税込）</p><p>差額：Huluのほうが50円高い</p><p>無料体験：どちらもなし</p></div>
+<div class="summary-box" data-title="料金比較"><p>Hulu：月額1,026円（税込）</p><p>FOD Premium：月額1,320円（税込）</p><p>差額：FODのほうが294円高い</p><p>無料体験：どちらもなし</p></div>
 
-<p>差額はたったの50円。缶コーヒー半分にも満たない差だから、<span class="marker">料金だけで選ぶのはあまり意味がない</span>と言えるね。大事なのは、この料金で何が楽しめるか、という中身のほうだよ。</p>
+<p>FODのほうが294円高くなった。以前はほぼ同じ料金だったけど、FODの値上げでHuluのほうが<span class="marker">コスパ面で有利</span>になったと言えるね。大事なのは、この料金で何が楽しめるか、という中身のほうだよ。</p>
 
 <p>どちらのサービスも無料体験が廃止されているのは共通のデメリット。いきなり課金になるから、事前にどんな作品があるか公式サイトでチェックしてから判断するのがおすすめだよ。</p>
 
@@ -704,7 +704,7 @@ export const articles: Article[] = [
 
 <p>今回は、Netflix・U-NEXT・Amazon Prime Video・Disney+の4サービスとHuluを比較して、「こんな人にはHuluが最適」「こんな人にはこっちがおすすめ」というのを明確にしていくね。</p>
 
-<div class="summary-box" data-title="比較対象サービス（2026年4月時点）"><p>Hulu：月額1,026円 / 10万本以上 / 同時4台</p><p>Netflix：月額790円〜1,980円 / 非公開 / 同時2〜4台</p><p>U-NEXT：月額2,189円 / 32万本以上 / 同時4台</p><p>Amazon Prime Video：月額600円 / 非公開 / 同時3台</p><p>Disney+：月額990円 / 2.1万本以上 / 同時4台</p></div>`
+<div class="summary-box" data-title="比較対象サービス（2026年4月時点）"><p>Hulu：月額1,026円 / 10万本以上 / 同時4台</p><p>Netflix：月額890円〜1,980円 / 非公開 / 同時2〜4台</p><p>U-NEXT：月額2,189円 / 32万本以上 / 同時4台</p><p>Amazon Prime Video：月額600円 / 非公開 / 同時3台</p><p>Disney+：月額1,140円 / 2.1万本以上 / 同時4台</p></div>`
       },
       {
         heading: '料金比較｜月額1,026円のHuluはお得？',
@@ -718,7 +718,7 @@ export const articles: Article[] = [
 
 <p><strong>U-NEXT（月額2,189円）は最高額だけど…</strong><br>毎月1,200円分のポイントが付与されるため実質約989円。ポイントを映画レンタルや書籍購入に使えるなら、コスパ的にはHuluとほぼ同等になるんだ。ただし「ポイントを使わない」人にとっては単純に高い。</p>
 
-<p><strong>Disney+（月額990円）はHuluとほぼ同額</strong><br>36円差でほぼ同じ。ただしDisney+はディズニー・マーベル・スター・ウォーズに特化しているので、方向性が全く異なるよ。</p>
+<p><strong>Disney+（月額1,140円）はHuluとほぼ同額</strong><br>36円差でほぼ同じ。ただしDisney+はディズニー・マーベル・スター・ウォーズに特化しているので、方向性が全く異なるよ。</p>
 
 <blockquote>料金だけで比較すると「Amazon最安→Netflix広告付き→Disney+→Hulu→Netflix標準→U-NEXT」の順。でも、大事なのは料金じゃなく「自分が観たいものがあるか」なんだよ。</blockquote>`
       },
