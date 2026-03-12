@@ -117,6 +117,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               '@type': 'WebSite',
               name: '動画配信ナビ',
               url: 'https://vod-navi-site.vercel.app',
+              description: '動画配信サービス（VOD）20社を徹底比較！料金・無料体験・おすすめ作品・キャンペーン情報を毎日更新。',
+              publisher: {
+                '@type': 'Organization',
+                name: '動画配信ナビ編集部',
+                url: 'https://vod-navi-site.vercel.app',
+              },
+              inLanguage: 'ja',
+              potentialAction: {
+                '@type': 'SearchAction',
+                target: 'https://vod-navi-site.vercel.app/?q={search_term_string}',
+                'query-input': 'required name=search_term_string',
+              },
             }),
           }}
         />

@@ -10,6 +10,7 @@ import GoogleAd from '@/components/GoogleAd';
 import AffiliateWidget from '@/components/AffiliateWidget';
 import ServiceProductCard from '@/components/ServiceProductCard';
 import CommentSection from '@/components/CommentSection';
+import AuthorBox from '@/components/AuthorBox';
 import { ArticleJsonLd, BreadcrumbJsonLd, FaqJsonLd, buildFaqFromSections } from '@/components/JsonLd';
 
 export const dynamicParams = false;
@@ -178,6 +179,9 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
           </Link>
         ))}
       </div>
+
+      {/* Author box (E-E-A-T) */}
+      <AuthorBox />
 
       {/* Category navigation */}
       <div className="bg-gray-50 border border-gray-200 rounded-xl p-4 my-6">
