@@ -42,10 +42,10 @@ export default async function PaginatedPage({ params }: { params: Promise<{ num:
   return (
     <div className="max-w-6xl mx-auto px-4 py-8">
       {/* Breadcrumb */}
-      <nav className="text-xs text-slate-500 mb-6 flex items-center gap-1">
-        <Link href="/" className="hover:text-purple-600 transition-colors">ホーム</Link>
+      <nav className="text-xs text-slate-400 mb-6 flex items-center gap-1">
+        <Link href="/" className="hover:text-amber-300 transition-colors">ホーム</Link>
         <span>/</span>
-        <span className="text-slate-400">記事一覧 ({page}ページ目)</span>
+        <span className="text-slate-500">記事一覧 ({page}ページ目)</span>
       </nav>
 
       {/* Ad after breadcrumb */}
@@ -55,9 +55,9 @@ export default async function PaginatedPage({ params }: { params: Promise<{ num:
 
       <div className="flex flex-col lg:flex-row gap-8">
         <div className="flex-1">
-          <h1 className="font-black text-lg text-slate-900 mb-4 flex items-center gap-2">
-            <span className="text-purple-600">●</span> 最新記事
-            <span className="text-sm font-normal text-slate-400 ml-2">{page} / {totalPages} ページ</span>
+          <h1 className="font-black text-lg text-white mb-4 flex items-center gap-2">
+            <span className="text-amber-400">●</span> 最新記事
+            <span className="text-sm font-normal text-slate-500 ml-2">{page} / {totalPages} ページ</span>
           </h1>
 
           <AdBanner size="medium" />
@@ -78,7 +78,7 @@ export default async function PaginatedPage({ params }: { params: Promise<{ num:
           </div>
 
           <Pagination currentPage={page} totalPages={totalPages} />
-          <p className="text-center text-xs text-slate-400 mt-3">
+          <p className="text-center text-xs text-slate-500 mt-3">
             全{totalArticles}件の記事
           </p>
         </div>

@@ -8,14 +8,14 @@ export default function AffiliateWidget({ service }: { service: ServiceInfo }) {
   const campaigns = getCampaignsByService(service.slug);
 
   return (
-    <div className="bg-gradient-to-r from-purple-50 to-cyan-50 rounded-xl border border-gray-200 p-5 md:p-6 my-8">
+    <div className="bg-gradient-to-br from-[#1a2233] to-[#121826] rounded-xl border border-amber-400/25 shadow-[0_0_30px_rgba(245,185,65,0.07)] p-5 md:p-6 my-8">
       <div className="flex items-start gap-4 mb-4">
         <ServiceIcon slug={service.slug} size="lg" />
         <div>
-          <h3 className="text-base font-black text-purple-600">
+          <h3 className="text-base font-black text-amber-300">
             {service.title}を始めるなら
           </h3>
-          <p className="text-xs text-slate-600">
+          <p className="text-xs text-slate-400">
             {service.freeTrialDays > 0
               ? `${service.freeTrialDays}日間無料でお試しできます`
               : '今すぐ登録して視聴開始'}
@@ -27,16 +27,16 @@ export default function AffiliateWidget({ service }: { service: ServiceInfo }) {
       {campaigns.length > 0 && (
         <div className="mb-4 space-y-2">
           {campaigns.map(c => (
-            <div key={c.slug} className="bg-white rounded-lg p-3 shadow-sm border border-gray-100">
+            <div key={c.slug} className="bg-[#0e131d] rounded-lg p-3 border border-white/[0.07]">
               <div className="flex items-center gap-2 mb-1">
                 {c.badge && (
-                  <span className="text-[9px] font-bold bg-amber-50 text-amber-600 border border-amber-200 px-1.5 py-0.5 rounded">
+                  <span className="text-[9px] font-bold bg-amber-400/10 text-amber-300 border border-amber-400/30 px-1.5 py-0.5 rounded">
                     {c.badge}
                   </span>
                 )}
-                <span className="text-xs font-bold text-slate-900">{c.title}</span>
+                <span className="text-xs font-bold text-slate-100">{c.title}</span>
               </div>
-              <p className="text-[11px] text-slate-600">{c.description}</p>
+              <p className="text-[11px] text-slate-400">{c.description}</p>
             </div>
           ))}
         </div>
@@ -50,21 +50,17 @@ export default function AffiliateWidget({ service }: { service: ServiceInfo }) {
             href={link.url}
             target="_blank"
             rel="noopener noreferrer nofollow"
-            className="block w-full text-center font-bold text-sm text-white py-3 rounded-lg transition-all hover:brightness-110 hover:scale-[1.02] shadow-md"
-            style={{
-              backgroundColor: service.color,
-              boxShadow: `0 3px 10px ${service.color}30`,
-            }}
+            className="btn-gold w-full text-sm py-3"
           >
             {link.badge ? `${link.label}` : `${service.title}公式サイトへ`}
-            <svg className="inline w-3.5 h-3.5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="inline w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
             </svg>
           </a>
         ))}
       </div>
 
-      <p className="text-[10px] text-slate-400 mt-4 text-center">
+      <p className="text-[10px] text-slate-500 mt-4 text-center">
         ※ 当サイトはアフィリエイトプログラムに参加しています
       </p>
 

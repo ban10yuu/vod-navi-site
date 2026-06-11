@@ -9,22 +9,22 @@ export default function CampaignBanner({ campaign }: { campaign: Campaign }) {
       href={campaign.url}
       target="_blank"
       rel="noopener noreferrer nofollow"
-      className="block group bg-white rounded-xl shadow-sm hover:shadow-md transition-all overflow-hidden"
+      className="block group poster-card"
     >
       <div className="flex">
         {/* Left accent border */}
-        <div className="w-[3px] shrink-0" style={{ background: service?.color || '#7c3aed' }} />
+        <div className="w-[3px] shrink-0" style={{ background: service?.color || '#f5b941' }} />
 
         <div className="p-4 flex-1">
           <div className="flex items-center gap-2 mb-2">
             {campaign.badge && <span className="campaign-badge">{campaign.badge}</span>}
-            <span className="text-[11px] text-slate-500">{service?.title}</span>
+            <span className="text-[11px] text-slate-400">{service?.title}</span>
           </div>
-          <h3 className="font-bold text-sm text-slate-900 group-hover:text-purple-600 transition-colors mb-1">
+          <h3 className="font-bold text-sm text-slate-100 group-hover:text-amber-300 transition-colors mb-1">
             {campaign.title}
           </h3>
-          <p className="text-xs text-slate-600 line-clamp-2">{campaign.description}</p>
-          <div className="mt-3 text-xs font-bold text-purple-600 group-hover:text-purple-700 transition-colors">
+          <p className="text-xs text-slate-400 line-clamp-2">{campaign.description}</p>
+          <div className="mt-3 text-xs font-bold text-amber-400 group-hover:text-amber-200 transition-colors">
             詳しく見る →
           </div>
         </div>

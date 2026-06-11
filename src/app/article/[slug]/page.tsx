@@ -90,18 +90,18 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
       <FaqJsonLd faqs={faqs} />
 
       {/* Breadcrumb */}
-      <nav className="text-xs text-slate-500 mb-4 flex items-center gap-1 flex-wrap">
-        <Link href="/" className="hover:text-purple-600 transition-colors">ホーム</Link>
+      <nav className="text-xs text-slate-400 mb-4 flex items-center gap-1 flex-wrap">
+        <Link href="/" className="hover:text-amber-300 transition-colors">ホーム</Link>
         <span>/</span>
         {service && (
           <>
-            <Link href={`/service/${service.slug}/`} className="hover:text-purple-600 transition-colors">{service.title}</Link>
+            <Link href={`/service/${service.slug}/`} className="hover:text-amber-300 transition-colors">{service.title}</Link>
             <span>/</span>
           </>
         )}
-        <Link href={`/category/${article.category}/`} className="hover:text-purple-600 transition-colors">{catLabel}</Link>
+        <Link href={`/category/${article.category}/`} className="hover:text-amber-300 transition-colors">{catLabel}</Link>
         <span>/</span>
-        <span className="text-slate-400 truncate">{article.title}</span>
+        <span className="text-slate-500 truncate">{article.title}</span>
       </nav>
 
       {/* Category + Date */}
@@ -109,14 +109,14 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
         <Link href={`/category/${article.category}/`} className={`text-[10px] font-bold px-2 py-0.5 rounded-full border ${catColor} hover:opacity-80 transition-opacity`}>
           {catLabel}
         </Link>
-        <span className="text-xs text-slate-400">{article.publishedAt}</span>
+        <span className="text-xs text-slate-500">{article.publishedAt}</span>
       </div>
 
       {/* Title */}
-      <h1 className="text-2xl md:text-3xl font-black text-slate-900 mb-4 leading-tight">
+      <h1 className="text-2xl md:text-3xl font-black text-white mb-4 leading-tight">
         {article.title}
       </h1>
-      <p className="text-sm text-slate-600 mb-6 leading-relaxed">{article.excerpt}</p>
+      <p className="text-sm text-slate-300 mb-6 leading-relaxed">{article.excerpt}</p>
 
       {/* Ad after excerpt */}
       <div className="my-6">
@@ -126,12 +126,12 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
       <AdBanner size="full" />
 
       {/* Table of contents */}
-      <div className="bg-gray-50 border border-gray-200 rounded-xl p-4 mb-8">
-        <h2 className="font-bold text-sm text-slate-900 mb-2">目次</h2>
+      <div className="bg-white/[0.04] border border-white/10 rounded-xl p-4 mb-8">
+        <h2 className="font-bold text-sm text-white mb-2">目次</h2>
         <ol className="space-y-1">
           {article.sections.map((sec, i) => (
             <li key={i}>
-              <a href={`#section-${i}`} className="text-xs text-slate-500 hover:text-purple-600 transition-colors">
+              <a href={`#section-${i}`} className="text-xs text-slate-400 hover:text-amber-300 transition-colors">
                 {i + 1}. {sec.heading}
               </a>
             </li>
@@ -174,7 +174,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
           <Link
             key={tag}
             href={`/tag/${encodeURIComponent(tag.toLowerCase().replace(/\s+/g, '-'))}/`}
-            className="text-xs px-2.5 py-1 bg-gray-100 text-slate-500 rounded-full hover:bg-purple-50 hover:text-purple-600 transition-colors"
+            className="text-xs px-2.5 py-1 bg-white/[0.06] text-slate-400 rounded-full hover:bg-amber-400/10 hover:text-amber-300 transition-colors"
           >
             #{tag}
           </Link>
@@ -188,15 +188,15 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
       <ShareButtons title={article.title} />
 
       {/* Category navigation */}
-      <div className="bg-gray-50 border border-gray-200 rounded-xl p-4 my-6">
-        <h3 className="font-bold text-sm text-slate-900 mb-2">カテゴリから探す</h3>
+      <div className="bg-white/[0.04] border border-white/10 rounded-xl p-4 my-6">
+        <h3 className="font-bold text-sm text-white mb-2">カテゴリから探す</h3>
         <div className="flex flex-wrap gap-2">
           {categories.map(([key, label]) => (
             <Link
               key={key}
               href={`/category/${key}/`}
               className={`text-[10px] font-bold px-2.5 py-1 rounded-full border transition-opacity hover:opacity-80 ${
-                key === article.category ? CATEGORY_COLORS[key] + ' ring-1 ring-offset-1' : CATEGORY_COLORS[key]
+                key === article.category ? CATEGORY_COLORS[key] + ' ring-1 ring-amber-300/60 ring-offset-1 ring-offset-[#0c1018]' : CATEGORY_COLORS[key]
               }`}
             >
               {label}
@@ -221,8 +221,8 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
       {/* Same service articles */}
       {sameServiceArticles.length > 0 && service && (
         <div className="mt-10">
-          <h2 className="font-black text-lg text-slate-900 mb-4 flex items-center gap-2">
-            <span className="text-purple-600">●</span> {service.title}の他の記事
+          <h2 className="font-black text-lg text-white mb-4 flex items-center gap-2">
+            <span className="text-amber-400">●</span> {service.title}の他の記事
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {sameServiceArticles.map(a => (
@@ -230,7 +230,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
             ))}
           </div>
           <div className="text-center mt-4">
-            <Link href={`/service/${service.slug}/`} className="text-xs text-purple-600 hover:text-purple-700 font-semibold transition-colors">
+            <Link href={`/service/${service.slug}/`} className="text-xs text-amber-400 hover:text-amber-200 font-semibold transition-colors">
               {service.title}の記事をすべて見る →
             </Link>
           </div>
@@ -240,8 +240,8 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
       {/* Related articles */}
       {related.length > 0 && (
         <div className="mt-10">
-          <h2 className="font-black text-lg text-slate-900 mb-4 flex items-center gap-2">
-            <span className="text-purple-600">●</span> 関連記事
+          <h2 className="font-black text-lg text-white mb-4 flex items-center gap-2">
+            <span className="text-amber-400">●</span> 関連記事
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {related.map(a => (
@@ -254,8 +254,8 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
       {/* Recommended from same category */}
       {categoryArticles.length > 0 && (
         <div className="mt-10">
-          <h2 className="font-black text-lg text-slate-900 mb-4 flex items-center gap-2">
-            <span className="text-cyan-500">●</span> 「{catLabel}」の他の記事
+          <h2 className="font-black text-lg text-white mb-4 flex items-center gap-2">
+            <span className="text-amber-400">●</span> 「{catLabel}」の他の記事
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {categoryArticles.map(a => (
@@ -263,7 +263,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
             ))}
           </div>
           <div className="text-center mt-4">
-            <Link href={`/category/${article.category}/`} className="text-xs text-purple-600 hover:text-purple-700 font-semibold transition-colors">
+            <Link href={`/category/${article.category}/`} className="text-xs text-amber-400 hover:text-amber-200 font-semibold transition-colors">
               {catLabel}の記事をすべて見る →
             </Link>
           </div>

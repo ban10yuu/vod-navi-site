@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Noto_Sans_JP } from 'next/font/google';
+import { Noto_Sans_JP, Oswald } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/next';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -9,6 +9,15 @@ const notoSansJP = Noto_Sans_JP({
   subsets: ['latin'],
   weight: ['400', '500', '700', '900'],
   display: 'swap',
+  variable: '--font-noto-sans-jp',
+});
+
+// Condensed display face for numerals / latin accents (theater-marquee feel)
+const oswald = Oswald({
+  subsets: ['latin'],
+  weight: ['500', '600', '700'],
+  display: 'swap',
+  variable: '--font-oswald',
 });
 
 export const metadata: Metadata = {
@@ -134,7 +143,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
       </head>
-      <body className={`${notoSansJP.className} antialiased min-h-screen flex flex-col bg-white text-slate-900`}>
+      <body className={`${notoSansJP.variable} ${oswald.variable} ${notoSansJP.className} antialiased min-h-screen flex flex-col bg-[#0c1018] text-slate-300`}>
         <div className="relative z-10 flex flex-col min-h-screen">
           <Header />
           <main className="flex-1">{children}</main>

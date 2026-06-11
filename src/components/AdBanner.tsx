@@ -15,7 +15,7 @@ export default function AdBanner({ size = 'full' }: { size?: Size }) {
           href={ad.url}
           target="_blank"
           rel="noopener noreferrer nofollow"
-          className="inline-block text-xs text-slate-400 hover:text-purple-600 transition-colors border border-gray-200 border-dashed rounded-lg px-4 py-2 hover:border-purple-300"
+          className="inline-block text-xs text-slate-400 hover:text-amber-300 transition-colors border border-white/10 border-dashed rounded-lg px-4 py-2 hover:border-amber-400/40"
         >
           PR: {ad.label}
         </a>
@@ -26,17 +26,17 @@ export default function AdBanner({ size = 'full' }: { size?: Size }) {
 
   if (size === 'medium') {
     return (
-      <div className="my-6 bg-gray-50 rounded-xl border border-gray-200 border-dashed p-4">
-        <div className="flex items-center justify-between">
+      <div className="my-6 bg-[#121826] rounded-xl border border-white/10 border-dashed p-4">
+        <div className="flex items-center justify-between gap-3">
           <div>
-            <span className="text-[9px] text-slate-400 block mb-1">PR</span>
-            <p className="text-sm font-bold text-slate-900">{ad.label}</p>
+            <span className="text-[9px] text-slate-500 block mb-1">PR</span>
+            <p className="text-sm font-bold text-slate-100">{ad.label}</p>
           </div>
           <a
             href={ad.url}
             target="_blank"
             rel="noopener noreferrer nofollow"
-            className="text-xs font-bold text-white bg-purple-600 hover:bg-purple-700 px-4 py-2 rounded-lg transition-colors flex-shrink-0"
+            className="btn-gold text-xs px-4 py-2 flex-shrink-0"
           >
             詳しく見る
           </a>
@@ -47,11 +47,11 @@ export default function AdBanner({ size = 'full' }: { size?: Size }) {
   }
 
   return (
-    <div className="my-8 bg-gray-50 rounded-xl border border-gray-200 border-dashed p-5">
-      <span className="text-[9px] text-slate-400 block mb-2">PR</span>
-      <p className="text-base font-black text-slate-900 mb-1">{ad.label}</p>
+    <div className="my-8 bg-[#121826] rounded-xl border border-white/10 border-dashed p-5">
+      <span className="text-[9px] text-slate-500 block mb-2">PR</span>
+      <p className="text-base font-black text-white mb-1">{ad.label}</p>
       {ad.badge && (
-        <span className="text-[9px] font-bold bg-amber-50 text-amber-600 border border-amber-200 px-1.5 py-0.5 rounded mb-3 inline-block">
+        <span className="text-[9px] font-bold bg-amber-400/10 text-amber-300 border border-amber-400/30 px-1.5 py-0.5 rounded mb-3 inline-block">
           {ad.badge}
         </span>
       )}
@@ -60,7 +60,7 @@ export default function AdBanner({ size = 'full' }: { size?: Size }) {
         href={ad.url}
         target="_blank"
         rel="noopener noreferrer nofollow"
-        className="inline-block text-sm font-bold text-white bg-purple-600 hover:bg-purple-700 px-6 py-2.5 rounded-lg transition-colors"
+        className="btn-gold text-sm px-6 py-2.5"
       >
         無料で始める →
       </a>

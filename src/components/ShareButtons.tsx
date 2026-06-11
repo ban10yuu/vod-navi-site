@@ -57,13 +57,13 @@ export default function ShareButtons({ title }: ShareButtonsProps) {
 
   return (
     <div className="flex items-center gap-3 my-6">
-      <span className="text-sm font-bold text-slate-600">共有:</span>
+      <span className="text-sm font-bold text-slate-300">共有:</span>
 
       {/* X (Twitter) */}
       <button
         onClick={() => handleShare('x')}
         aria-label="Xでシェア"
-        className="w-10 h-10 rounded-full bg-black text-white flex items-center justify-center hover:opacity-80 transition-opacity"
+        className="w-10 h-10 rounded-full bg-black text-white ring-1 ring-white/20 flex items-center justify-center hover:opacity-80 transition-opacity"
       >
         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
           <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
@@ -101,7 +101,7 @@ export default function ShareButtons({ title }: ShareButtonsProps) {
         className={`w-10 h-10 rounded-full flex items-center justify-center transition-all ${
           copied
             ? 'bg-green-500 text-white'
-            : 'bg-gray-100 text-slate-500 hover:bg-purple-100 hover:text-purple-600'
+            : 'bg-white/[0.08] text-slate-300 hover:bg-amber-400/20 hover:text-amber-300'
         }`}
       >
         {copied ? (

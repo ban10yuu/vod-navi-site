@@ -51,20 +51,20 @@ export default async function TagPage({ params }: { params: Promise<{ slug: stri
       <TagPageJsonLd tag={tagName} articleCount={articles.length} />
 
       {/* Breadcrumb */}
-      <nav className="text-xs text-slate-500 mb-6 flex items-center gap-1">
-        <Link href="/" className="hover:text-purple-600 transition-colors">ホーム</Link>
+      <nav className="text-xs text-slate-400 mb-6 flex items-center gap-1">
+        <Link href="/" className="hover:text-amber-300 transition-colors">ホーム</Link>
         <span>/</span>
-        <Link href="/tags/" className="hover:text-purple-600 transition-colors">タグ一覧</Link>
+        <Link href="/tags/" className="hover:text-amber-300 transition-colors">タグ一覧</Link>
         <span>/</span>
-        <span className="text-slate-400">{tagName}</span>
+        <span className="text-slate-500">{tagName}</span>
       </nav>
 
       <div className="flex flex-col lg:flex-row gap-8">
         <div className="flex-1">
-          <h1 className="text-2xl font-black text-slate-900 mb-2">
-            <span className="text-purple-600">#</span>{tagName}
+          <h1 className="text-2xl font-black text-white mb-2">
+            <span className="text-amber-400">#</span>{tagName}
           </h1>
-          <p className="text-sm text-slate-500 mb-6">
+          <p className="text-sm text-slate-400 mb-6">
             「{tagName}」に関する記事が{articles.length}件あります。
           </p>
 
@@ -80,8 +80,8 @@ export default async function TagPage({ params }: { params: Promise<{ slug: stri
               ))}
             </div>
           ) : (
-            <div className="text-center py-12 text-slate-400">
-              <p className="font-bold text-slate-600">記事を準備中です</p>
+            <div className="text-center py-12 text-slate-500">
+              <p className="font-bold text-slate-300">記事を準備中です</p>
             </div>
           )}
 

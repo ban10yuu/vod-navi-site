@@ -51,16 +51,16 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
         ]}
       />
 
-      <nav className="text-xs text-slate-500 mb-6 flex items-center gap-1">
-        <Link href="/" className="hover:text-purple-600 transition-colors">ホーム</Link>
+      <nav className="text-xs text-slate-400 mb-6 flex items-center gap-1">
+        <Link href="/" className="hover:text-amber-300 transition-colors">ホーム</Link>
         <span>/</span>
-        <span className="text-slate-400">{label}</span>
+        <span className="text-slate-500">{label}</span>
       </nav>
 
       <div className="flex flex-col lg:flex-row gap-8">
         <div className="flex-1">
-          <h1 className="text-2xl font-black text-slate-900 mb-2">{label}の記事一覧</h1>
-          <p className="text-sm text-slate-500 mb-4">
+          <h1 className="text-2xl font-black text-white mb-2">{label}の記事一覧</h1>
+          <p className="text-sm text-slate-400 mb-4">
             動画配信サービスの{label}に関する記事が{articles.length}件あります。
           </p>
 
@@ -71,7 +71,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
                 key={key}
                 href={`/category/${key}/`}
                 className={`text-[10px] font-bold px-2.5 py-1 rounded-full border transition-opacity hover:opacity-80 ${
-                  key === slug ? CATEGORY_COLORS[key] + ' ring-1 ring-offset-1' : CATEGORY_COLORS[key]
+                  key === slug ? CATEGORY_COLORS[key] + ' ring-1 ring-amber-300/60 ring-offset-1 ring-offset-[#0c1018]' : CATEGORY_COLORS[key]
                 }`}
               >
                 {catLabel}
@@ -91,9 +91,9 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
               ))}
             </div>
           ) : (
-            <div className="text-center py-12 text-slate-400">
+            <div className="text-center py-12 text-slate-500">
               <p className="text-4xl mb-3">📝</p>
-              <p className="font-bold text-slate-600">記事を準備中です</p>
+              <p className="font-bold text-slate-300">記事を準備中です</p>
             </div>
           )}
 

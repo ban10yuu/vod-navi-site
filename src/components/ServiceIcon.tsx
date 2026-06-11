@@ -12,7 +12,7 @@ export const SERVICE_ICONS: Record<string, { abbr: string; color: string }> = {
   'telasa': { abbr: 'T', color: '#ff8c00' },
   'crunchyroll': { abbr: 'CR', color: '#f47521' },
   'wowow': { abbr: 'W', color: '#0057b8' },
-  'apple-tv-plus': { abbr: '\u25B6', color: '#333333' },
+  'apple-tv-plus': { abbr: '\u25B6', color: '#4a4a4f' },
   'rakuten-tv': { abbr: 'R', color: '#bf0000' },
   'dazn': { abbr: 'DA', color: '#0d1b2a' },
   'tver': { abbr: 'TV', color: '#0abab5' },
@@ -56,7 +56,7 @@ export default function ServiceIcon({ slug, color, title, size = 'md', showName 
     return (
       <span className="inline-flex items-center gap-2">
         {badge}
-        <span className="text-sm font-medium text-slate-700">{displayName}</span>
+        <span className="text-sm font-medium text-slate-200">{displayName}</span>
       </span>
     );
   }

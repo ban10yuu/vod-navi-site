@@ -11,19 +11,19 @@ export const metadata: Metadata = {
 export default function PrivacyPolicyPage() {
   return (
     <div className="max-w-3xl mx-auto px-4 py-8">
-      <nav className="text-xs text-slate-500 mb-6 flex items-center gap-1">
-        <Link href="/" className="hover:text-purple-600 transition-colors">ホーム</Link>
+      <nav className="text-xs text-slate-400 mb-6 flex items-center gap-1">
+        <Link href="/" className="hover:text-amber-300 transition-colors">ホーム</Link>
         <span>/</span>
-        <span className="text-slate-400">プライバシーポリシー</span>
+        <span className="text-slate-500">プライバシーポリシー</span>
       </nav>
 
-      <h1 className="text-2xl font-black text-slate-900 mb-8">
+      <h1 className="text-2xl font-black text-white mb-8">
         プライバシーポリシー
       </h1>
 
-      <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 md:p-8 space-y-8 text-[0.95rem] leading-relaxed text-slate-700">
+      <div className="bg-[#121826] rounded-xl shadow-sm border border-white/[0.06] p-6 md:p-8 space-y-8 text-[0.95rem] leading-relaxed text-slate-200">
         <section>
-          <h2 className="text-lg font-bold text-slate-900 mb-3 pl-3 border-l-4 border-purple-600">
+          <h2 className="text-lg font-bold text-white mb-3 pl-3 border-l-4 border-amber-400">
             個人情報の取り扱いについて
           </h2>
           <p>
@@ -34,7 +34,7 @@ export default function PrivacyPolicyPage() {
         </section>
 
         <section>
-          <h2 className="text-lg font-bold text-slate-900 mb-3 pl-3 border-l-4 border-purple-600">
+          <h2 className="text-lg font-bold text-white mb-3 pl-3 border-l-4 border-amber-400">
             Google Analyticsの利用について
           </h2>
           <p>
@@ -45,7 +45,7 @@ export default function PrivacyPolicyPage() {
               href="https://policies.google.com/technologies/partner-sites"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-purple-600 hover:underline"
+              className="text-amber-400 hover:underline"
             >
               Googleのポリシーと規約
             </a>
@@ -57,7 +57,7 @@ export default function PrivacyPolicyPage() {
               href="https://tools.google.com/dlpage/gaoptout"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-purple-600 hover:underline"
+              className="text-amber-400 hover:underline"
             >
               Google Analyticsオプトアウトアドオン
             </a>
@@ -66,7 +66,7 @@ export default function PrivacyPolicyPage() {
         </section>
 
         <section>
-          <h2 className="text-lg font-bold text-slate-900 mb-3 pl-3 border-l-4 border-purple-600">
+          <h2 className="text-lg font-bold text-white mb-3 pl-3 border-l-4 border-amber-400">
             Google AdSenseおよびCookieについて
           </h2>
           <p>
@@ -79,7 +79,7 @@ export default function PrivacyPolicyPage() {
               href="https://www.google.com/settings/ads"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-purple-600 hover:underline"
+              className="text-amber-400 hover:underline"
             >
               Googleの広告設定
             </a>
@@ -88,7 +88,7 @@ export default function PrivacyPolicyPage() {
               href="https://www.aboutads.info/choices/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-purple-600 hover:underline"
+              className="text-amber-400 hover:underline"
             >
               aboutads.info
             </a>
@@ -97,7 +97,7 @@ export default function PrivacyPolicyPage() {
         </section>
 
         <section>
-          <h2 className="text-lg font-bold text-slate-900 mb-3 pl-3 border-l-4 border-purple-600">
+          <h2 className="text-lg font-bold text-white mb-3 pl-3 border-l-4 border-amber-400">
             アフィリエイトプログラムについて
           </h2>
           <p>
@@ -109,7 +109,7 @@ export default function PrivacyPolicyPage() {
         </section>
 
         <section>
-          <h2 className="text-lg font-bold text-slate-900 mb-3 pl-3 border-l-4 border-purple-600">
+          <h2 className="text-lg font-bold text-white mb-3 pl-3 border-l-4 border-amber-400">
             免責事項
           </h2>
           <p>
@@ -121,7 +121,7 @@ export default function PrivacyPolicyPage() {
         </section>
 
         <section>
-          <h2 className="text-lg font-bold text-slate-900 mb-3 pl-3 border-l-4 border-purple-600">
+          <h2 className="text-lg font-bold text-white mb-3 pl-3 border-l-4 border-amber-400">
             プライバシーポリシーの変更
           </h2>
           <p>
@@ -131,19 +131,19 @@ export default function PrivacyPolicyPage() {
         </section>
 
         <section>
-          <h2 className="text-lg font-bold text-slate-900 mb-3 pl-3 border-l-4 border-purple-600">
+          <h2 className="text-lg font-bold text-white mb-3 pl-3 border-l-4 border-amber-400">
             お問い合わせ
           </h2>
           <p>
             本ポリシーに関するお問い合わせは、
-            <Link href="/contact/" className="text-purple-600 hover:underline">
+            <Link href="/contact/" className="text-amber-400 hover:underline">
               お問い合わせページ
             </Link>
             よりご連絡ください。
           </p>
         </section>
 
-        <p className="text-sm text-slate-400 pt-4 border-t border-gray-200">
+        <p className="text-sm text-slate-500 pt-4 border-t border-white/10">
           制定日: 2026年3月11日
         </p>
       </div>

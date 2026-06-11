@@ -31,16 +31,16 @@ export default function TagsPage() {
       />
 
       {/* Breadcrumb */}
-      <nav className="text-xs text-slate-500 mb-6 flex items-center gap-1">
-        <Link href="/" className="hover:text-purple-600 transition-colors">ホーム</Link>
+      <nav className="text-xs text-slate-400 mb-6 flex items-center gap-1">
+        <Link href="/" className="hover:text-amber-300 transition-colors">ホーム</Link>
         <span>/</span>
-        <span className="text-slate-400">タグ一覧</span>
+        <span className="text-slate-500">タグ一覧</span>
       </nav>
 
       <div className="flex flex-col lg:flex-row gap-8">
         <div className="flex-1">
-          <h1 className="text-2xl font-black text-slate-900 mb-2">タグ一覧</h1>
-          <p className="text-sm text-slate-500 mb-6">
+          <h1 className="text-2xl font-black text-white mb-2">タグ一覧</h1>
+          <p className="text-sm text-slate-400 mb-6">
             全{tags.length}個のタグから記事を探せます。
           </p>
 
@@ -52,18 +52,18 @@ export default function TagsPage() {
           {/* Popular tags */}
           {largeTags.length > 0 && (
             <div className="mb-8">
-              <h2 className="font-black text-lg text-slate-900 mb-4 flex items-center gap-2">
-                <span className="text-purple-600">●</span> 人気タグ
+              <h2 className="font-black text-lg text-white mb-4 flex items-center gap-2">
+                <span className="text-amber-400">●</span> 人気タグ
               </h2>
               <div className="flex flex-wrap gap-2">
                 {largeTags.map(t => (
                   <Link
                     key={t.slug}
                     href={`/tag/${t.slug}/`}
-                    className="text-sm font-bold px-4 py-2 rounded-full bg-purple-50 text-purple-700 border border-purple-200 hover:bg-purple-100 transition-colors"
+                    className="text-sm font-bold px-4 py-2 rounded-full bg-amber-400/10 text-amber-300 border border-amber-400/25 hover:bg-amber-400/15 transition-colors"
                   >
                     #{t.tag}
-                    <span className="ml-1.5 text-xs text-purple-400">({t.count})</span>
+                    <span className="ml-1.5 text-xs text-amber-400/70">({t.count})</span>
                   </Link>
                 ))}
               </div>
@@ -73,18 +73,18 @@ export default function TagsPage() {
           {/* Medium tags */}
           {mediumTags.length > 0 && (
             <div className="mb-8">
-              <h2 className="font-black text-lg text-slate-900 mb-4 flex items-center gap-2">
-                <span className="text-cyan-500">●</span> よく使われるタグ
+              <h2 className="font-black text-lg text-white mb-4 flex items-center gap-2">
+                <span className="text-amber-400">●</span> よく使われるタグ
               </h2>
               <div className="flex flex-wrap gap-2">
                 {mediumTags.map(t => (
                   <Link
                     key={t.slug}
                     href={`/tag/${t.slug}/`}
-                    className="text-xs font-medium px-3 py-1.5 rounded-full bg-gray-50 text-slate-600 border border-gray-200 hover:text-purple-600 hover:border-purple-200 hover:bg-purple-50 transition-colors"
+                    className="text-xs font-medium px-3 py-1.5 rounded-full bg-white/[0.04] text-slate-300 border border-white/10 hover:text-amber-300 hover:border-amber-400/30 hover:bg-amber-400/10 transition-colors"
                   >
                     #{t.tag}
-                    <span className="ml-1 text-slate-400">({t.count})</span>
+                    <span className="ml-1 text-slate-500">({t.count})</span>
                   </Link>
                 ))}
               </div>
@@ -99,15 +99,15 @@ export default function TagsPage() {
           {/* Small tags */}
           {smallTags.length > 0 && (
             <div className="mb-8">
-              <h2 className="font-black text-lg text-slate-900 mb-4 flex items-center gap-2">
-                <span className="text-amber-500">●</span> その他のタグ
+              <h2 className="font-black text-lg text-white mb-4 flex items-center gap-2">
+                <span className="text-amber-400">●</span> その他のタグ
               </h2>
               <div className="flex flex-wrap gap-1.5">
                 {smallTags.map(t => (
                   <Link
                     key={t.slug}
                     href={`/tag/${t.slug}/`}
-                    className="text-[11px] px-2 py-1 rounded bg-gray-100 text-slate-500 hover:text-purple-600 hover:bg-purple-50 transition-colors"
+                    className="text-[11px] px-2 py-1 rounded bg-white/[0.06] text-slate-400 hover:text-amber-300 hover:bg-amber-400/10 transition-colors"
                   >
                     #{t.tag}
                   </Link>
